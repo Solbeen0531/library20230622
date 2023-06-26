@@ -1,10 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main_3 #main3 {
+            width: 1260px;
+            height: 800px;
+            padding: 0;
+            position: relative;
+            background: url(/www.gbelib.kr/resources/common/img/culture_type02/culture2-bg.jpg)no-repeat 100% 100%;
+            background-size: cover;
+        }
+
+         h3 {
+
+            font-family: 'S-Core Dream 5';
+            color: #222;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin: 0;
+            padding: 0;
+            line-height: 150%;
+            word-break: keep-all;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-size: 25px;
+        }
+        title.h3{
+            font-family: 'S-Core Dream 5';
+            color: #222;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin: 0;
+            padding: 0;
+            line-height: 150%;
+            word-break: keep-all;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-size: 25px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border: 0;
+            overflow-clip-margin: content-box;
+            overflow: clip;
+            color: #000;
+            font-family: 'Noto Sans';
+            line-height: 150%;
+            word-break: keep-all;
+            font-size: 15px;
+            font-weight: 500;
+            margin-left: 450px;
+        }
+
+        div {
+            font-family: 'Noto Sans';
+            margin: 0;
+            padding: 10;
+            line-height: 150%;
+            word-break: keep-all;
+            font-size: 17px;
+            color: #666;
+            font-weight: 500;
+            display: block;
+        }
+
+        .calendar-wrap {
+            margin-top: 15px;
+            margin-left: 25px;
+            height: 500px;
+            position: relative;
+            background: #fff;
+            padding-bottom: 30px;
+            box-sizing: border-box;
+            width: 500px;
+        }
+
+        #main3 .calendar-box {
+            float: left;
+            width: 500px;
+        }
+        #main3 event-box {
+            float: right;
+            width: calc(100% - 520px);
+        }
+    </style>
 </head>
+
 <body>
     <header class="header">
 
@@ -12,23 +105,406 @@
     <section>
         <article class="main_1">
             <!-- 박준모 -->
-            
+
         </article>
         <article class="main_2">
             <!-- 임지연 -->
-            
+
         </article>
         <article class="main_3">
-            <!-- 정유선 -->
-            
+            <!-- 정윤선 -->
+            </div>
+            <div id="main3" class="section">
+                <div class="main3-wrap mid-sections">
+                    <div class="calendar-box">
+                        <div class="title">
+                            <h3>CALENDAR</h3>
+                            <a href="/ul/module/calendarManage/index.do?menu_idx=104" title="일정 더보기 버튼">
+                                <img src="/www.gbelib.kr/resources/common/img/culture_type02/more-btn-b.png"
+                                    alt="일정 더보기 이미지" title="일정 더보기 이미지">
+                            </a>
+                        </div>
+                        <div class="calendar-box" id="calendar-box">
+                            <script type="text/javascript">
+                                $(function () {
+                                    Date.prototype.format = function (f) {
+                                        if (!this.valueOf())
+                                            return " ";
+
+                                        var weekName = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+                                        var d = this;
+
+                                        return f.replace(/(yyyy|yy|MM|dd|E|hh|mm|ss|a\/p)/gi, function ($1) {
+                                            switch ($1) {
+                                                case "yyyy":
+                                                    return d.getFullYear();
+                                                case "yy":
+                                                    return (d.getFullYear() % 1000).zf(2);
+                                                case "MM":
+                                                    return (d.getMonth() + 1).zf(2);
+                                                case "dd":
+                                                    return d.getDate().zf(2);
+                                                case "E":
+                                                    return weekName[d.getDay()];
+                                                case "HH":
+                                                    return d.getHours().zf(2);
+                                                case "hh":
+                                                    return ((h = d.getHours() % 12) ? h : 12).zf(2);
+                                                case "mm":
+                                                    return d.getMinutes().zf(2);
+                                                case "ss":
+                                                    return d.getSeconds().zf(2);
+                                                case "a/p":
+                                                    return d.getHours() < 12 ? "오전" : "오후";
+                                                default:
+                                                    return $1;
+                                            }
+                                        });
+                                    };
+
+                                    String.prototype.string = function (len) {
+                                        var s = '', i = 0;
+                                        while (i++ < len) {
+                                            s += this;
+                                        }
+                                        return s;
+                                    };
+                                    String.prototype.zf = function (len) {
+                                        return "0".string(len - this.length) + this;
+                                    };
+                                    Number.prototype.zf = function (len) {
+                                        return this.toString().zf(len);
+                                    };
+
+                                    $('#before-btn').on(
+                                        'click',
+                                        function (e) {
+                                            var plan_date = new Date($(this).attr('keyValue'));
+                                            plan_date.setMonth(plan_date.getMonth() - 1);
+                                            //plan_date.format('yyyy-MM')
+                                            $('div#calendar-box').load('calendar3.do',
+                                                'plan_date=' + plan_date.format('yyyy-MM'));
+                                            e.preventDefault();
+                                        });
+                                    $('#next-btn').on(
+                                        'click',
+                                        function (e) {
+                                            var plan_date = new Date($(this).attr('keyValue'));
+                                            plan_date.setMonth(plan_date.getMonth() + 1);
+                                            $('div#calendar-box').load('calendar3.do',
+                                                'plan_date=' + plan_date.format('yyyy-MM'));
+                                            e.preventDefault();
+                                        });
+
+                                    $('span.showCal').on('click', function (e) {
+                                        var key = $(this).attr('keyValue');
+                                        $(".calAll").hide();
+                                        $("#popup_layer").show();
+                                        $("#" + key).show();
+                                        e.preventDefault();
+                                    });
+                                    $('.close').on('click', function (e) {
+                                        $("#popup_layer").hide();
+                                        $(".calAll").hide();
+                                    });
+
+                                });
+                            </script>
+                            <div id="calendar2">
+                                <div class="calendar-wrap">
+                                    <div class="cal-bord">
+                                        <div class="cal-func2">
+                                            <a id="before-btn" href="#prev" class="btn prev" keyvalue="2023-06"><img
+                                                    src="/www.gbelib.kr/resources/common/img/culture_type02/cal-prev-btn.png"
+                                                    alt="이전달"><span class="blind">이전달</span></a>
+                                            <p>2023</p>
+                                            <b>06</b>
+                                            <a id="next-btn" href="#next" class="btn next" keyvalue="2023-06"><img
+                                                    src="/www.gbelib.kr/resources/common/img/culture_type02/cal-next-btn.png"
+                                                    alt="다음달"><span class="blind">다음달</span></a>
+                                        </div>
+
+                                        <div class="calendar-info">
+                                            <span class="hu">휴관</span>
+                                            <span class="ev">행사</span>
+                                        </div>
+
+                                        <table class="cal-tbl">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            1</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            2</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="3">3</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            4</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="5">5</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="6">6</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            7</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            8</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            9</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="10">10</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            11</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="12">12</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            13</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            14</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            15</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            16</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="17">17</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            18</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="19">19</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            20</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            21</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            22</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            23</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="24">24</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            25</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="26">26</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            27</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            28</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            29</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            30</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="planView">
+                                            <div class="inbox" id="popup_layer" style="display: none;">
+                                                <div id="3" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-3</dt>
+                                                    </dl>
+                                                    [강좌]어린이 독서회 [Book쟁이...
+                                                    <br>
+                                                </div>
+                                                <div id="10" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-10</dt>
+                                                    </dl>
+                                                    [강좌]어린이 독서회 [Book쟁이...
+                                                    <br>
+                                                </div>
+                                                <div id="6" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-6</dt>
+                                                    </dl>
+                                                    [휴관일] 현충일<br>
+                                                </div>
+                                                <div id="19" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-19</dt>
+                                                    </dl>
+                                                    [휴관일] 정기휴관일<br>
+                                                </div>
+                                                <div id="5" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-5</dt>
+                                                    </dl>
+                                                    [휴관일] 정기휴관일<br>
+                                                </div>
+                                                <div id="17" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-17</dt>
+                                                    </dl>
+                                                    [강좌]어린이 독서회 [Book쟁이...
+                                                    <br>
+                                                </div>
+                                                <div id="24" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-24</dt>
+                                                    </dl>
+                                                    [강좌]어린이 독서회 [Book쟁이...
+                                                    <br>
+                                                </div>
+                                                <div id="26" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-26</dt>
+                                                    </dl>
+                                                    [휴관일] 정기휴관일<br>
+                                                </div>
+                                                <div id="12" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-12</dt>
+                                                    </dl>
+                                                    [휴관일] 정기휴관일<br>
+                                                </div>
+                                                <a href="#" class="close"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="event-box">
+                    <div class="title">
+                        <h3>EVENT</h3>
+                        <a href="/ul/module/teach/index.do?menu_idx=191&searchCate1=16,17" title="행사 더보기 버튼">
+                            <img src="/www.gbelib.kr/resources/common/img/culture_type02/more-btn-b.png"
+                                alt="행사 더보기 이미지" title="행사 더보기 이미지">
+                        </a>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div>
+                                        등록된 강좌가 없습니다.
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
         </article>
         <article class="main-4">
             <!-- 박솔빈 -->
-            
+
         </article>
     </section>
     <footer class="footer">
 
     </footer>
 </body>
+
 </html>
