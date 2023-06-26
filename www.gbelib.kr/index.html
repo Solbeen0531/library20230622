@@ -8,8 +8,37 @@
     <title>울릉도서관</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./main_1.css">
-    <script src="https://code.jquery.com/jquery-3.7.0.js" ></script>
- 
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="/resources/common/css/layout/notice_type04.css" rel="stylesheet">
+    <link href="/resources/common/css/layout/default_new_fullpage.css" rel="stylesheet">
+    <link href="/resources/common/css/layout/jquery.fullpage.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+        // 팝업존
+        if ($('div.popupzonenew ul').length > 0) {
+            $('div.popupzonenew ul').bxSlider({
+                mode: 'fade',
+                auto: true,
+                autoHover: true,
+                speed: 500,
+                pager: true,
+                pagerType: 'short',
+                auto: true,
+                //controller 부분 자동 생성
+                autoControls: true,
+                autoControlsCombine: true
+            });
+        }
+        
+      });
+    </script>
+
     <style>
         .main_3 #main3 {
             width: 1260px;
@@ -20,7 +49,7 @@
             background-size: cover;
         }
 
-         h3 {
+        h3 {
 
             font-family: 'S-Core Dream 5';
             color: #222;
@@ -37,7 +66,8 @@
             margin-inline-end: 0px;
             font-size: 25px;
         }
-        title.h3{
+
+        title.h3 {
             font-family: 'S-Core Dream 5';
             color: #222;
             letter-spacing: 2px;
@@ -96,6 +126,7 @@
             float: left;
             width: 500px;
         }
+
         #main3 event-box {
             float: right;
             width: calc(100% - 520px);
@@ -106,7 +137,10 @@
 
 <body>
     <header class="header">
-
+        <div class="slider">
+            <div>I am a slide.</div>
+            <div>I am another slide.</div>
+          </div>
     </header>
     <section>
         <article> <!--박준모-->
@@ -139,7 +173,7 @@
                                             </fieldset>
                                         </form>
                                     </div>
-    
+
                                 </div>
                             </div>
                             <div class="main_1-box-bottom">
@@ -212,6 +246,68 @@
         </article>
         <article class="main_2">
             <!-- 임지연 -->
+            <div class="main1-inner-left">
+                <div class="notice-box"> <!--공지사항에 관한 것-->
+                    <div class="title"> <!--공지사항에 관한 것-->
+                        <h3>공지사항</h3>
+                        <a href="http://www.gbelib.kr/ul/board/index.do?menu_idx=58&manage_idx=528"
+                            title="공지사항 더보기 버튼"><img src="/resources/common/img/notice_type04/more-btn.png"
+                                alt="공지사항 더보기 이미지" title="공지사항 더보기 이미지"></a>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <ul>
+                                <li><a href="/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=244560"
+                                        title="게시글 자세히 보기">울릉도서관 6월 휴관일 안내</a><span>2023-06-02</span></li>
+                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=244406"
+                                        title="게시글 자세히 보기"> 2023년 상반기 평생교육 강좌 만족도 설문조사 안내</a><span>2023-05-31</span>
+                                </li>
+                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=242277"
+                                        title="게시글 자세히 보기"> 울릉도서관 5월 휴관일 안내</a><span>2023-04-30</span></li>
+                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=242277"
+                                        title="게시글 자세히 보기"> �제 59회 도서관주간 및 세계 책의 날 행사 안내</a><span>2023-04-04</span></li>
+                                <li><a href="#" title="게시글 자세히 보기"> 어린이 독서회 [Book쟁이] 회원 모집</a><span>2023-03-14</span>
+                                </li>
+                                <li><a href="#" title="게시글 자세히 보기"> 디지털 자료실 이용 제한 안내</a><span>2023-02-28</span></li>
+                                <li><a href="#" title="게시글 자세히 보기"> 울릉도서관 삼일절(3. 1.) 휴관 안내</a><span>2023-02-23</span>
+                                </li>
+                                <li><a href="#" title="게시글 자세히 보기"> 울릉도서관 화장실 보수 공사 안내</a><span>2023-02-22</span></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main1-inner-right">
+                <div class="popupzone-box">
+                    <div class="title">
+                        <h3>팝업존</h3>
+                    </div>
+                    <div class="popupzonenew">
+                    <div class="bx-wrapper" style="max-width: 100%;">
+                        <div class="bx-viewport"
+                            style="width: 100%; overflow: hidden; position: relative; height: 379px;">
+                            <ul style="width: auto; position: relative;">
+                                <li>
+                                    <a
+                                        href=" http://www.gbelib.kr/ul/board/view.do?menu_idx=58&amp;manage_idx=528&amp;board_idx=244560">
+                                        <img alt="5월 휴관" src="http://www.gbelib.kr/data/popupZone/h26/1683081896240"></a>
+                                </li>
+                                <li>
+                                    <a href=" ">
+                                        <img alt="두배로" src="http://www.gbelib.kr/data/popupZone/h26/1683605178662"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gbelib.kr/ul/board/index.do?menu_idx=21&amp;manage_idx=529">
+                                        <img alt="5,6 추천도서" src="http://www.gbelib.kr//data/popupZone/h26/1683081896240"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- controller 부분 자동 생성 -->
+                    </div>
+                    </div>
+                </div>
+            </div>
 
         </article>
         <article class="main_3">
@@ -223,8 +319,8 @@
                         <div class="title">
                             <h3>CALENDAR</h3>
                             <a href="/ul/module/calendarManage/index.do?menu_idx=104" title="일정 더보기 버튼">
-                                <img src="/resources/common/img/culture_type02/more-btn-b.png"
-                                    alt="일정 더보기 이미지" title="일정 더보기 이미지">
+                                <img src="/resources/common/img/culture_type02/more-btn-b.png" alt="일정 더보기 이미지"
+                                    title="일정 더보기 이미지">
                             </a>
                         </div>
                         <div class="calendar-box" id="calendar-box">
@@ -581,8 +677,8 @@
                     <div class="title">
                         <h3>EVENT</h3>
                         <a href="/ul/module/teach/index.do?menu_idx=191&searchCate1=16,17" title="행사 더보기 버튼">
-                            <img src="/resources/common/img/culture_type02/more-btn-b.png"
-                                alt="행사 더보기 이미지" title="행사 더보기 이미지">
+                            <img src="/resources/common/img/culture_type02/more-btn-b.png" alt="행사 더보기 이미지"
+                                title="행사 더보기 이미지">
                         </a>
                     </div>
                     <div class="list">
