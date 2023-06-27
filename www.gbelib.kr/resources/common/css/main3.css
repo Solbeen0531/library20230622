@@ -1,5 +1,5 @@
  #main3 {
-    width: 1260px;
+    width: 1260px;margin: 0 auto;
     height: 800px;
     padding: 0;
     position: relative;
@@ -8,7 +8,9 @@
 }
 
 
-
+#main3 .main3-wrap.mid-sections{
+    overflow: hidden;
+}
 #main3 .calendar-box .title h3 {
     font-family: 'S-Core Dream 5';
     color: #222;
@@ -42,7 +44,7 @@
     margin-inline-end: 0px;
     font-size: 30px;
     float: right;
-    width: calc(100% - 520px);
+    width: calc(100% - 570px);
 
 }
 
@@ -65,7 +67,6 @@
 #main3 div {
     font-family: 'Noto Sans';
     margin: 0;
-    padding: 10;
     line-height: 150%;
     word-break: keep-all;
     font-size: 17px;
@@ -91,7 +92,7 @@
     width: 500px;
 }
 
-#main3 event-box {
+#main3 .event-box {
     float: right;
     width: calc(100% - 520px);
 }
