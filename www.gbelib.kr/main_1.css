@@ -78,6 +78,9 @@
 .main_1 .quickmenu{
    display: block;
 }
+.main_1 .quickmenu ul{
+    text-align: center;
+}
 .main_1 .quickmenu ul li{
     display: inline-block;
     width: 11%;
