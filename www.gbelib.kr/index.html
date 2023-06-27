@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>울릉도서관</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./main_1.css">
+    <link rel="stylesheet" href="/resources/common/css/reset.css">
+    <link rel="stylesheet" href="/resources/common/css/main_1.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <link href="/resources/common/css/layout/notice_type04.css" rel="stylesheet">
     <link href="/resources/common/css/layout/default_new_fullpage.css" rel="stylesheet">
     <link href="/resources/common/css/layout/jquery.fullpage.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="/resources/common/css/main3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -40,17 +41,21 @@
         });
         $(document).ready(function () {
 
-            // 팝업존
-            if ($('div.bx-pager bx-default-pager').length > 0) {
-                $('div.popupzonenew ul').bxSlider({
-                    mode: 'fade',
+
+            // 책 소개
+            if ($('div.bookinfo ul').length > 0) {
+                $('div.bookinfo ul').bxSlider({
+                    mode: 'horizontal',
+                    slideMargin: 5,
+
                     auto: true,
                     autoHover: true,
                     speed: 500,
-                    pager: true,
+                    pager: false,
                     pagerType: 'short',
                     auto: true,
                     //controller 부분 자동 생성
+                    
                     autoControls: true,
                     autoControlsCombine: true
                 });

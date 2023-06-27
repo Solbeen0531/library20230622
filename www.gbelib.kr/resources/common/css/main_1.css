@@ -1,5 +1,5 @@
 #main_1 {
-    background: url('resources/homepage/ul/img/main0-bg.png') no-repeat center bottom;
+    background: url('/resources/homepage/ul/img/main0-bg.png') no-repeat center bottom;
     display: table;
     table-layout: fixed;
     width: 1260px;
