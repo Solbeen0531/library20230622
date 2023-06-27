@@ -1,5 +1,5 @@
 #main_1 {
-    background: url('/www.gbelib.kr/resources/homepage/ul/img/main0-bg.png') no-repeat center bottom;
+    background: url('resources/homepage/ul/img/main0-bg.png') no-repeat center bottom;
     display: table;
     table-layout: fixed;
     width: 1260px;
@@ -77,6 +77,9 @@
 }
 .main_1 .quickmenu{
    display: block;
+}
+.main_1 .quickmenu ul{
+    text-align: center;
 }
 .main_1 .quickmenu ul li{
     display: inline-block;
