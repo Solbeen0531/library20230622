@@ -54,16 +54,18 @@
             if ($('div.bookinfo ul').length > 0) {
                 $('div.bookinfo ul').bxSlider({
                     mode: 'horizontal',
+                    slideMargin: 5,
                     auto: true,
                     autoHover: true,
                     speed: 500,
-                    pager: true,
+                    pager: false,
                     pagerType: 'short',
                     auto: true,
                     minSlides: 4,
                     maxSlides: 4,
                     moveSlides: 1,
                     //controller 부분 자동 생성
+                    
                     autoControls: true,
                     autoControlsCombine: true
                 });
