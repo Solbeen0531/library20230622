@@ -1,0 +1,93 @@
+ #main3 {
+    width: 1260px;
+    height: 800px;
+    padding: 0;
+    position: relative;
+    background: url("/resources/common/img/culture_type02/culture2-bg.jpg")no-repeat 100% 100%;
+    background-size: cover;
+}
+
+
+
+#main3 .calendar-box .title h3 {
+    font-family: 'S-Core Dream 5';
+    color: #222;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    word-break: keep-all;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 30px;
+}
+
+#main3 .event-box .title h3{
+    font-family: 'S-Core Dream 5';
+    color: #222;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    word-break: keep-all;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 30px;
+}
+
+
+#main3 img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 0;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    color: #000;
+    font-family: 'Noto Sans';
+    line-height: 150%;
+    word-break: keep-all;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 450px;
+}
+
+#main3 div {
+    font-family: 'Noto Sans';
+    margin: 0;
+    padding: 10;
+    line-height: 150%;
+    word-break: keep-all;
+    font-size: 17px;
+    color: #666;
+    font-weight: 500;
+    display: block;
+}
+
+#main3 .calendar-wrap {
+    margin-top: 15px;
+    margin-left: 25px;
+    height: 500px;
+    position: relative;
+    background: #fff;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    width: 500px;
+}
+
+#main3 .calendar-box {
+    float: left;
+    width: 500px;
+}
+
+#main3 event-box {
+    float: right;
+    width: calc(100% - 520px);
+}
