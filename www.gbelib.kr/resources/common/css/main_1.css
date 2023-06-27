@@ -47,12 +47,20 @@
     text-align: left;
     margin-top: 40px;
 }
+.main_1 .blind{
+    display: none;
+}
+.main_1 .search #mainsearch{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-top: 1.9%;
+}
 .main_1 .search-box{
     position: relative;
     width: 100%;
     display: inline-block;
     margin-top: 1.9%;
-    border-radius: 50px;
 }
 .main_1 .search #mainsearch{
     position: relative;
@@ -70,6 +78,9 @@
     box-sizing: border-box;
     height: 60px;
     line-height: 60px;
+}
+.main_1 #search-box{
+    border-radius: 50px;
 }
 .main_1 .main_1-box-bottom{
     overflow: hidden;
