@@ -71,4 +71,10 @@
     height: 60px;
     line-height: 60px;
 }
+.main_1-box-bottom{
+    overflow: hidden;
+}
+.quickmenu{
+    float: left;
+}
 
