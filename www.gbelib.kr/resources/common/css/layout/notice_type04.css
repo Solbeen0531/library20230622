@@ -8,11 +8,12 @@
     background: linear-gradient(75deg, #0088c1, #0058a2);
     width: calc(40%);
     float: left;
-    padding: 260px 0 140px;
+    padding: 260px 0 140px ;
 }
 .main_2 .main1-inner-right {
     width: calc(60%);
     float: right;
+    padding: 260px 0 140px 0;
 }
 .main_2 .notice-box .list ul li:nth-child(1) {
     height: 120px;
