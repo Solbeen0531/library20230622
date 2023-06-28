@@ -93,9 +93,9 @@
             <div>I am another slide.</div>
         </div>
     </header>
-    <section>
+    <section id="fullpage" class="fullpage-wrapper" style="transform: translate3d(0px, 0px, 0px); transition: all 700mx ease 0s; height: 100%; position: relative; touch-action: none;">
         <article class="main_1"> <!--박준모-->
-            <div id="main_1" class="section fp-section active fp-table fp-completely">
+            <div id="main_1" class="section fp-section active fp-table fp-completely" data-anchor="firstPage">
                 <div class="tableCell">
                     <div class="source">
                         <p>출처: 울릉홍보관 2022년 독도 풍경</p>
@@ -196,7 +196,7 @@
 
         </article>
         <!-- 임지연 -->
-        <article class="main_2">
+        <article class="main_2" id="main_2" data-anchor="secondPage">
 
             <div class="main1-inner-left">
                 <div class="notice-box"> <!--공지사항에 관한 것-->
@@ -271,7 +271,7 @@
 
         </article>
         <!-- 정윤선 -->
-        <article class="main_3">
+        <article class="main_3" id="main_3" data-anchor="3rdPage">
 
             </div>
             <div id="main3" class="section">
@@ -656,7 +656,7 @@
 
         </article>
         <!-- 박솔빈 -->
-        <article class="main_4">
+         <article class="main_4" id="main_4" data-anchor="4thPage">
             <div class="main4-inner-left-up">
                 <div class="main4-top-left" style="float: left;">
                     <h2>
@@ -665,6 +665,10 @@
                     </h2>
                 </div>
             </div>
+
+        
+
+
             <div class="main4-inner-right-up">
                 <div class="bookinfo-box">
                     
@@ -841,6 +845,37 @@
             </div>
 
         </article>
+    </section>
+    <section id="fp-nav" class="fp-right fp-show-active" style="margin-top: -65.5px;">
+        <div>
+            <ul>
+                <li>
+                    <a href="#main_1" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#main_2" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#main_3" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#main_4" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+            </ul>
+        </div>
     </section>
     <footer class="footer">
 
