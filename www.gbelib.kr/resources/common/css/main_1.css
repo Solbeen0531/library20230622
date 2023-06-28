@@ -88,6 +88,7 @@
 }
 .main_1 .quickmenu{
    display: block;
+   padding-top: 8%;
 }
 .main_1 .quickmenu ul{
     text-align: center;
@@ -95,4 +96,7 @@
 .main_1 .quickmenu ul li{
     display: inline-block;
     width: 11%;
+}
+.main_1 .quickmenu ul .qtxt{
+    color: white;
 }
