@@ -36,9 +36,10 @@
                     autoControls: true,
                     autoControlsCombine: true
                 });
-            }
-
+                
+            }    
         });
+
     </script>
 
     <!-- main3: 달력, 이벤트 -->
@@ -51,39 +52,48 @@
         .main_4 .title .stxt{
             padding: 0 0 0 5px;
         }
-
         .main_4 .main4-inner-left-up {
-            border: 1px solid red;
-            background-color: aqua;
             background: url('/resources/common/img/book_type01/book01-bg.jpg');
         }
     </style>
 
     <script>
         // 책 소개 관련 
+
         $(document).ready(function () {
 
+
             // 책 소개
-            if ($('div.bookinfonew ul').length > 0) {
-                $('div.bookinfonew ul').bxSlider({
+            if ($('div.bookinfo ul').length > 0) {
+                $('div.bookinfo ul').bxSlider({
                     mode: 'horizontal',
+                    slideMargin: 5,
                     auto: true,
                     autoHover: true,
                     speed: 500,
-                    pager: true,
+                    pager: false,
                     pagerType: 'short',
                     auto: true,
+
                     moveSlides: 5,
 
-                    //controller 부분 자동 생성
 
+                    //controller 부분 자동 생성
+                    
                     autoControls: true,
                     autoControlsCombine: true
                 });
             }
 
         });
+
     </script>
+
+
+    <!-- main4: 책 소개 -->
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -133,56 +143,56 @@
                                         <li>
                                             <a href="#"></a>
                                             <div class="image">
-                                                <img src="resources/homepage/ul/img/q1.png" alt="대출조회·예약">
+                                                <img src="/resources/homepage/ul/img/q1.png" alt="대출조회·예약">
                                                 <div class="qtxt">대출조회·예약</div>
                                             </div>
                                         </li>
                                         <li>
                                             <a href="#"></a>
                                             <div class="image">
-                                                <img src="resources/homepage/ul/img/q2.png" alt="희망도서신청">
+                                                <img src="/resources/homepage/ul/img/q2.png" alt="희망도서신청">
                                             </div>
                                             <div class="qtxt">희망도서신청</div>
                                         </li>
                                         <li>
                                             <a href="#"></a>
                                             <div class="image">
-                                                <img src="resources/homepage/ul/img/q3.png" alt="문화행사신청">
+                                                <img src="/resources/homepage/ul/img/q3.png" alt="문화행사신청">
                                             </div>
                                             <div class="qtxt">문화행사신청</div>
                                         </li>
                                         <li>
                                             <a href="#"></a>
                                             <div class="image">
-                                                <img src="resources/homepage/ul/img/q4.png" alt="전자도서관">
+                                                <img src="/resources/homepage/ul/img/q4.png" alt="전자도서관">
                                             </div>
                                             <div class="qtxt">전자도서관</div>
                                         </li>
                                         <li>
                                             <a href="#"></a>
                                             <div class="image">
-                                                <img src="resources/homepage/ul/img/q5.png" alt="이용안내">
+                                                <img src="/resources/homepage/ul/img/q5.png" alt="이용안내">
                                             </div>
                                             <div class="qtxt">이용안내</div>
                                         </li>
                                         <li>
                                             <a href="#"></a>
                                             <div class="image">
-                                                <img src="resources/homepage/ul/img/q6.png" alt="자주하는질문">
+                                                <img src="/resources/homepage/ul/img/q6.png" alt="자주하는질문">
                                             </div>
                                             <div class="qtxt">자주하는질문</div>
                                         </li>
                                         <li>
                                             <a href="#"></a>
                                             <div class="image">
-                                                <img src="resources/homepage/ul/img/q7.png" alt="스마트도서관">
+                                                <img src="/resources/homepage/ul/img/q7.png" alt="스마트도서관">
                                             </div>
                                             <div class="qtxt">스마트도서관</div>
                                         </li>
                                         <li>
                                             <a href="#"></a>
                                             <div class="image">
-                                                <img src="resources/homepage/ul/img/q8.png" alt="책바다서비스">
+                                                <img src="/resources/homepage/ul/img/q8.png" alt="책바다서비스">
                                             </div>
                                             <div class="qtxt">책바다서비스</div>
                                         </li>
@@ -195,9 +205,9 @@
             </div>
 
         </article>
-        <!-- 임지연 -->
-        <article class="main_2" id="main_2" data-anchor="secondPage">
 
+        <article class="main_2" id="main_2" data-anchor="secondPage">
+            <!-- 임지연 -->
             <div class="main1-inner-left">
                 <div class="notice-box"> <!--공지사항에 관한 것-->
                     <div class="title"> <!--공지사항에 관한 것-->
@@ -217,9 +227,10 @@
                                 <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=242277"
                                         title="게시글 자세히 보기"> 울릉도서관 5월 휴관일 안내</a><span>2023-04-30</span></li>
                                 <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=242277"
-                                        title="게시글 자세히 보기"> �제 59회 도서관주간 및 세계 책의 날 행사 안내</a><span>2023-04-04</span></li>
-                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=241203"
-                                        title="게시글 자세히 보기"> 어린이 독서회 [Book쟁이] 회원 모집</a><span>2023-03-14</span>
+
+                                        title="게시글 자세히 보기"> 🎉 제 59회 도서관주간 및 세계 책의 날 행사 안내</a><span>2023-04-04</span></li>
+                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=241203" title="게시글 자세히 보기"> 어린이 독서회 [Book쟁이] 회원 모집</a><span>2023-03-14</span>
+
                                 </li>
                                 <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240652"
                                         title="게시글 자세히 보기"> 디지털 자료실 이용 제한 안내</a><span>2023-02-28</span></li>
@@ -264,10 +275,12 @@
                                 </ul>
                             </div>
                             <!-- controller 부분 자동 생성 -->
+                            <div class="bx-controls bx-has-pager bx-has-controls-direction bx-has-controls-auto">
+                                <div class="bx-pager bx-default-pager>" </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
         </article>
         <!-- 정윤선 -->
@@ -631,31 +644,34 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="event-box">
-                        <div class="title">
-                            <h3>EVENT</h3>
-                            <a href="/ul/module/teach/index.do?menu_idx=191&searchCate1=16,17" title="행사 더보기 버튼">
-                                <img src="/resources/common/img/culture_type02/more-btn-b.png" alt="행사 더보기 이미지"
-                                    title="행사 더보기 이미지">
-                            </a>
-                        </div>
-                        <div class="list">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <div>
-                                            등록된 강좌가 없습니다.
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
+                <div class="event-box">
+                    <div class="title">
+                        <h3>EVENT</h3>
+                        <a href="/ul/module/teach/index.do?menu_idx=191&searchCate1=16,17" title="행사 더보기 버튼">
+                            <img src="/resources/common/img/culture_type02/more-btn-b.png" alt="행사 더보기 이미지"
+                                title="행사 더보기 이미지">
+                        </a>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div>
+                                        등록된 강좌가 없습니다.
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
 
         </article>
         <!-- 박솔빈 -->
+
          <article class="main_4" id="main_4" data-anchor="4thPage">
             <div class="main4-inner-left-up">
                 <div class="main4-top-left" style="float: left;">

@@ -12,8 +12,10 @@
 }
 .main_2 .main1-inner-right {
     width: calc(60%);
-    float: right;
-    padding: 260px 0 140px 0;
+    position: relative;
+    float: left;
+    height: 100%;
+    padding: 260px 0 140px;
 }
 .main_2 .notice-box .list ul li:nth-child(1) {
     height: 120px;
@@ -28,6 +30,13 @@
 .main_2 .notice-box .list ul li {
     margin-bottom: 15px;
 }
+.main_2 .notice-box .list ul li span{
+    float: right;
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 400;
+}
+
 a {
     font-size: 18px;
     color: #fff;
@@ -40,14 +49,15 @@ a {
 }
 
 
-
-.main2-inner-right .title h3 {
-    color: #333;
+/* 타이틀 */
+.main_2 .notice-box .title h3 {
+    color: #fff;
     font-size: 33px;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     font-weight: 600;
+    text-align: left;
 }
-.main2-inner-right .title {
+.main_2-inner-right .title {
     position: relative;
     text-align: left;
     padding-bottom: 20px;
