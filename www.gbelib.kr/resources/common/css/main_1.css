@@ -2,7 +2,7 @@
     background: url('/resources/homepage/ul/img/main0-bg.png') no-repeat center bottom;
     display: table;
     table-layout: fixed;
-    height: 900px;
+    height: 800px;
     font-size: 15px;
     line-height: 150%;
     word-break: keep-all;
@@ -101,4 +101,8 @@
 }
 .main_1 .quickmenu ul .qtxt{
     color: white;
+    margin-top: 20px;
+}
+.main_1 .quickmenu ul li>a{
+    display: block;
 }
