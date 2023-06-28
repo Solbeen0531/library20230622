@@ -35,6 +35,9 @@
     bottom: 10px;
     right: 10px;
 }
+.main_1 .source p{
+    color:rgba(255, 255, 255, 0.7);
+}
 .main_1 .slogan{
     height: 230px;
     text-align: center;
