@@ -1,55 +1,68 @@
  #main3 {
-    width: 1260px;margin: 0 auto;
-    height: 800px;
-    padding: 0;
-    position: relative;
+    /* height: 800px; */
+    /* padding: 0; */
+    /* position: relative; */
     background: url("/resources/common/img/culture_type02/culture2-bg.jpg")no-repeat 100% 100%;
     background-size: cover;
 }
+#main3 {
+    font-family: 'Noto Sans';
+    /* margin: 0; */
+    line-height: 150%;
+    word-break: keep-all;
+    font-size: 17px;
+    color: #666;
+    font-weight: 500;
+}
 
+#main3 .main3-wrap {
+    width: 1260px; margin: 0 auto;
+    overflow: hidden;
+}
+#main3 .main3-wrap > .calendar-box{
+    float: left;
+    width: 500px;
+}
+#main3 .main3-wrap > .event-box{
+    float: right;
+    width: calc(100% - 530px);
+}
 
-#main3 .main3-wrap.mid-sections{
+#main3  h3{
+    font-weight: 550;
+    line-height: 150%;
+    word-break: keep-all;
+    font-size: 30px;
+}
+
+#main3 .calendar-box .title, #main3 .event-box .title{
     overflow: hidden;
 }
 #main3 .calendar-box .title h3 {
-    font-family: 'S-Core Dream 5';
-    color: #222;
-    letter-spacing: 2px;
-    font-weight: 550;
-    margin: 0;
-    padding: 0;
-    line-height: 150%;
-    word-break: keep-all;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 20px;
-    margin-inline-end: 0px;
-    font-size: 30px;
+    /* ysjung  */
+    float: left;
 }
-
 #main3 .event-box .title h3{
-    font-family: 'S-Core Dream 5';
-    color: #222;
-    letter-spacing: 2px;
-    font-weight: 550;
-    margin: 0;
-    padding: 0;
-    line-height: 150%;
-    word-break: keep-all;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-size: 30px;
-    float: right;
+    /* ysjung  */
+    /* float: right; */
     width: calc(100% - 570px);
-
+    float: left;
 }
-
-
-#main3 img {
+#main3 .calendar-box .title a, #main3 .event-box .title a {
+    /* ysjung  */
+    float: right;
+    display: block;
+    color: #000;
+}
+#main3 .calendar-box .title a > img, #main3 .event-box .title a > img {
+    /* ysjung  */
+    float: right;
+    display: block;
+    color: #000;
+    margin-top: 5px;
+}
+/* 
+#main3 #calendar-box img {
     max-width: 100%;
     max-height: 100%;
     border: 0;
@@ -62,37 +75,24 @@
     font-size: 15px;
     font-weight: 500;
     margin-left: 450px;
-}
-
-#main3 div {
-    font-family: 'Noto Sans';
-    margin: 0;
-    line-height: 150%;
-    word-break: keep-all;
-    font-size: 17px;
-    color: #666;
-    font-weight: 500;
-    display: block;
-    
-}
-
-#main3 .calendar-wrap {
-    margin-top: 15px;
-    margin-left: 25px;
+} */
+/* #main3 .calendar-wrap {
     height: 500px;
     position: relative;
     background: #fff;
     padding-bottom: 30px;
     box-sizing: border-box;
     width: 500px;
-}
+} */
 
-#main3 .calendar-box {
-    float: left;
-    width: 500px;
-}
-
-#main3 .event-box {
-    float: right;
-    width: calc(100% - 520px);
+#main3 .blind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -999px;
 }
