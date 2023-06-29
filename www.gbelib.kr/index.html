@@ -12,13 +12,12 @@
     <link href="/resources/common/css/notice_type04.css" rel="stylesheet">
     <link href="/resources/common/css/default_new_fullpage.css" rel="stylesheet">
     <link href="/resources/common/css/jquery.fullpage.css" rel="stylesheet">
-
     <link rel="stylesheet" href="/resources/common/css/main3.css">
     <link rel="stylesheet" href="/resources/common/css/culture_type02.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
+    <script src="/resources/common/js/jquery.fullpage.js"></script>
     <!-- main2: 공지사항, 팝업존 -->
     <script>
         $(document).ready(function () {
@@ -95,9 +94,10 @@
     </style>
 </head>
 
-<!-- <body class="fp-viewing-secondPage" style="overflow: hidden; height: 100%;"> -->
 
-<body>
+<body class="fp-viewing-secondPage" style="overflow: hidden; height: 100%;">
+
+
     <header class="header">
         <div class="slider">
             <div>I am a slide.</div>
@@ -108,7 +108,7 @@
         style="transform: translate3d(0px, 0px, 0px); transition: all 700mx ease 0s; height: 100%; position: relative; touch-action: none;">
         <article class="main_1"> <!--박준모-->
             <div id="main_1" class="section fp-section active fp-table fp-completely" data-anchor="firstPage">
-                <div class="tableCell">
+                <div class="fp-tableCell">
                     <div class="source">
                         <p>출처: 울릉홍보관 2022년 독도 풍경</p>
                     </div>
@@ -136,6 +136,9 @@
                                             </fieldset>
                                         </form>
                                     </div>
+
+                                </div>
+                                <div class="main_1-inner-right">
 
                                 </div>
                             </div>
@@ -889,12 +892,82 @@
                 </div>
 
         </article>
-    
 
+    </section>
+    <!-- <script type="text/javascript">
+        
+function fullPage() {
+	var myFullpage = new fullpage('#fullpage', {
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+		navigation:true,
+		showActiveTooltip: true,
+		menu: '#menu',
+		responsiveWidth: 1025,
+		afterLoad: function(origin, destination, direction){
+			var cur_page = destination.index+1;
+			if (destination.index == 0 ) {
+				$('#header').removeClass("background-white");
+				$('.Gnb').css('border-top','1px solid #e6e6e6');
+				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
+				$('.Gnb').css('background','#fff');
+				$('.tnb').css('background','#f2f2f2');
+			}  else if( destination.index == 1 ) {
+				$('#header').removeClass("background-white");
+				$('.Gnb').css('border-top','1px solid #e6e6e6');
+				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
+				$('.Gnb').css('background','#fff');
+				$('.tnb').css('background','#f2f2f2');
+			}	else if( destination.index == 2 ) {
+				$('#header').removeClass("background-white");
+				$('.Gnb').css('border-top','1px solid #e6e6e6');
+				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
+				$('.Gnb').css('background','#fff');
+				$('.tnb').css('background','#f2f2f2');
+			}  else if( destination.index == 3 ) {
+				$('#header').removeClass("background-white");
+				$('.Gnb').css('border-top','1px solid #e6e6e6');
+				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
+				$('.Gnb').css('background','#fff');
+				$('.tnb').css('background','#f2f2f2');
+			} else {
+				$('#header').removeClass("background-white");
+				$('.Gnb').css('border-top','1px solid #e6e6e6');
+				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
+				$('.Gnb').css('background','#fff');
+				$('.tnb').css('background','#f2f2f2');
+			}
+		},
+		afterResponsive: function(isResponsive){}
+	});
+};
 
-    
-    <footer class="footer">
-        <!-- <section id="fp-nav" class="fp-right fp-show-active" style="margin-top: -65.5px;">
+fullPage();
+
+// 모바일일 경우 fullpage 미사용
+if ( $(window).width() < 1025 ) {
+	if ($('#fullpage').hasClass('fp-destroyed')){
+	} else {
+		fullpage_api.destroy('all');
+	}
+} else {
+	fullPage();
+};
+
+// 리사이즈 될때 모바일 화면에서 fullpage 미사용
+$( window ).resize( function(e) {
+	if ( $(window).width() < 1025 ) {
+		if ($('#fullpage').hasClass('fp-destroyed')){
+		} else {
+			fullpage_api.destroy('all');
+		}
+	} else {
+		fullPage();
+	};
+});
+
+    </script>
+   
+    <section id="fp-nav" class="fp-right fp-show-active" style="margin-top: -65.5px;">
         <div>
             <ul>
                 <li>
@@ -903,17 +976,55 @@
                     <span></span>
                 </li>
                 <li>
-                    <a href="#main_2" class=""></a>
+                    <a href="#main_2" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#main_3" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#main_4" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+
+
+        </article>
+        </section>
+        <section id="fp-nav" class="fp-right fp-show-active" style="margin-top: -65.5px;">
+
+
+        <div>
+            <ul>
+                <li>
+                    <a href="#firstPage" class="active"></a>
+                    <span class="fp-sr-only">fistPage</span>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#secondPage" class=""></a>
                     <span class="fp-sr-only">secondPage</span>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#main_3" class=""></a>
+                    <a href="#3rdPage" class=""></a>
                     <span class="fp-sr-only">3rdPage</span>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#main_4" class=""></a>
+                    <a href="#4thPage" class=""></a>
                     <span class="fp-sr-only">4thtPage</span>
                     <span></span>
                 </li>
@@ -923,10 +1034,12 @@
                     <span></span>
                 </li>
             </ul>
-        </div> -->
+
+        </div> 
     </section> 
 
-    </footer>
+    </footer>--> 
+
 
 </body>
 
