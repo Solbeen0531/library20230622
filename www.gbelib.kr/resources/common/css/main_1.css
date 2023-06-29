@@ -1,6 +1,6 @@
 #main_1 {
     background: url('/resources/homepage/ul/img/main0-bg.png') no-repeat center bottom;
-    display: table;
+    /* display: table; */
     table-layout: fixed;
     height: 800px;
     font-size: 15px;

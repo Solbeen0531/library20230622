@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>울릉도서관</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    
+    <link rel="stylesheet" href="/resources/common/css/reset.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
+    <link rel="stylesheet" href="/resources/common/css/main_1.css">
+    <link rel="stylesheet" href="/resources/common/css/main2.css">
+    <link rel="stylesheet" href="/resources/common/css/main3.css">
+    <link rel="stylesheet" href="/resources/common/css/culture_type02.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
+    <!-- main2: 공지사항, 팝업존 -->
+    <script>
+        $(document).ready(function () {
+            // 팝업존
+            if ($('div.popupzonenew ul').length > 0) {
+                $('div.popupzonenew ul').bxSlider({
+                    mode: 'fade',
+                    auto: true,
+                    autoHover: true,
+                    speed: 500,
+                    pager: true,
+                    pagerType: 'short',
+                    auto: true,
+                    //controller 부분 자동 생성
+                    autoControls: true,
+                    autoControlsCombine: true
+                });
+            }
+        });
+
+    </script>
+
+    <!-- main3: 달력, 이벤트 -->
+    <style>
+
+    </style>
+
+    <!-- main4: 책 소개 -->
+    <style>
+        .main_4 .title .stxt {
+            padding: 0 0 0 5px;
+        }
+
+        .main_4 .main4-inner-left-up {
+            background: url('/resources/common/img/book_type01/book01-bg.jpg');
+        }
+    </style>
+
+    <script>
+        // 책 소개 관련 
+
+        $(document).ready(function () {
+            // 책 소개
+            if ($('div.bookinfonew ul').length > 0) {
+                $('div.bookinfonew ul').bxSlider({
+                    mode: 'horizontal',
+                    slideMargin: 5,
+                    auto: true,
+                    autoHover: true,
+                    speed: 500,
+                    pager: false,
+                    pagerType: 'short',
+                    auto: true,
+                    moveSlides: 5,
+
+                    //controller 부분 자동 생성
+                    autoControls: true,
+                    autoControlsCombine: true
+                });
+            }
+
+        });
+
+    </script>
+
+
+    <!-- main4: 책 소개 -->
+    <style>
+
+    </style>
+</head>
+
+<body class="fp-viewing-secondPage" style="overflow: hidden; height: 100%;">
+    <header class="header">
+        <div class="slider">
+            <div>I am a slide.</div>
+            <div>I am another slide.</div>
+        </div>
+    </header>
+    <section id="fullpage" >
+        <article class="main_1 section"> <!--박준모-->
+        <!--박준모-->    
+            <div id="main_1">
+                <div class="source">
+                    <p>출처: 울릉홍보관 2022년 독도 풍경</p>
+                </div>
+                <div class="main_1_wrap">
+                    <div class="sections">
+                        <div class="main_1-box-top">
+                             <div class="main_1-inner-left">
+                                <div class="slogan">
+                                    <p class="text-01">경상북도교육청 울릉도서관</p>
+                                    <p class="text-02">
+                                            "책 읽는 작은 여유가"
+                                            <br>
+                                            "마음 속의"
+                                            <br>
+                                            "큰 행복입니다!"
+                                    </p>
+                                </div>
+                                <div class="search">
+                                    <form id="mainsearch" action="/ui/intro/search/index.do">
+                                        <fieldset>
+                                            <div class="search-box">
+                                                <label for="searchText" class="blind">통합자료검색</label>
+                                                <input type="text" placeholder="찾으시는 도서 정보를 입력하세요." id="searchText">
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="main_1-inner-right">
+                            </div>
+                        </div>
+                        <div class="main_1-box-bottom">
+                            <div class="quickmenu">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="대출조회·예약"></a>
+                                        <div class="image">
+                                            <img src="/resources/homepage/ul/img/q1.png" alt="대출조회·예약">
+                                            <div class="qtxt">대출조회·예약</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <div class="image">
+                                            <img src="/resources/homepage/ul/img/q2.png" alt="희망도서신청">
+                                        </div>
+                                        <div class="qtxt">희망도서신청</div>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <div class="image">
+                                            <img src="/resources/homepage/ul/img/q3.png" alt="문화행사신청">
+                                        </div>
+                                        <div class="qtxt">문화행사신청</div>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <div class="image">
+                                            <img src="/resources/homepage/ul/img/q4.png" alt="전자도서관">
+                                        </div>
+                                        <div class="qtxt">전자도서관</div>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <div class="image">
+                                            <img src="/resources/homepage/ul/img/q5.png" alt="이용안내">
+                                        </div>
+                                        <div class="qtxt">이용안내</div>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <div class="image">
+                                            <img src="/resources/homepage/ul/img/q6.png" alt="자주하는질문">
+                                        </div>
+                                        <div class="qtxt">자주하는질문</div>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <div class="image">
+                                            <img src="/resources/homepage/ul/img/q7.png" alt="스마트도서관">
+                                        </div>
+                                        <div class="qtxt">스마트도서관</div>
+                                    </li>
+                                    <li>
+                                        <a href="#"></a>
+                                        <div class="image">
+                                            <img src="/resources/homepage/ul/img/q8.png" alt="책바다서비스">
+                                        </div>
+                                        <div class="qtxt">책바다서비스</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="main_2 section" id="main_2" >
+            <!-- 임지연 -->
+            <div id="main1">
+                    <!--공지사항에 관한 것-->
+                    <div class="main1-inner-left">
+                        <div class="notice-box">
+                            <div class="title">
+                                <h3>공지사항</h3>
+                                <a href="http://www.gbelib.kr/ul/board/index.do?menu_idx=58&manage_idx=528"
+                                    title="공지사항 더보기 버튼"><img src="/resources/common/img/notice_type04/more-btn.png"
+                                        alt="공지사항 더보기 이미지" title="공지사항 더보기 이미지"></a>
+                            </div>
+                            <div class="list">
+                                <ul>
+                                    <ul>
+                                        <li><a href="#" title="게시글 자세히 보기">울릉도서관 6월 휴관일 안내</a><span>2023-06-02</span>
+                                        </li>
+                                        <li><a href="#" title="게시글 자세히 보기"> 2023년 상반기 평생교육 강좌 만족도 설문조사
+                                                안내</a><span>2023-05-31</span>
+                                        </li>
+                                        <li><a href="#" title="게시글 자세히 보기"> 울릉도서관 5월 휴관일 안내</a><span>2023-04-30</span>
+                                        </li>
+                                        <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=242277"
+                                                title="게시글 자세히 보기"> 🎉 제 59회 도서관주간 및 세계 책의 날 행사
+                                                안내</a><span>2023-04-04</span>
+                                        </li>
+                                        <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=241203"
+                                                title="게시글 자세히 보기"> 어린이 독서회 [Book쟁이] 회원 모집</a><span>2023-03-14</span>
+
+                                        </li>
+                                        <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240652"
+                                                title="게시글 자세히 보기"> 디지털 자료실 이용 제한 안내</a><span>2023-02-28</span></li>
+                                        <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240433"
+                                                title="게시글 자세히 보기"> 울릉도서관 삼일절(3. 1.) 휴관 안내</a><span>2023-02-23</span>
+                                        </li>
+                                        <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240421"
+                                                title="게시글 자세히 보기"> 울릉도서관 화장실 보수 공사 안내</a><span>2023-02-22</span></li>
+                                    </ul>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 팝업존에 관한 것 -->
+                    <div class="main1-inner-right">
+                        <div class="popupzone-box">
+                            <div class="title">
+                                <h3>팝업존</h3>
+                            </div>
+                            <div class="popupzonenew">
+                                <div class="bx-wrapper" style="max-width: 100%;">
+                                    <div class="bx-viewport"
+                                        style="width: 100%; overflow: hidden; position: relative; height: 379px;">
+                                        <ul style="width: auto; position: relative;">
+                                            <li>
+                                                <a
+                                                    href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&amp;manage_idx=528&amp;board_idx=244560">
+                                                    <img alt="5월 휴관" src="/data/popupZone/h26/1685665582984.jpg"></a>
+                                            </li>
+                                            <li>
+                                                <a href=" ">
+                                                    <img alt="두배로" src="/data/popupZone/h26/1683605178662.jpg"></a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.gbelib.kr/ul/board/index.do?menu_idx=21&amp;manage_idx=529">
+                                                    <img alt="5,6 추천도서" src="/data/popupZone/h26/1683081896240.jpg"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- controller 부분 자동 생성 -->
+                                    <div
+                                        class="bx-controls bx-has-pager bx-has-controls-direction bx-has-controls-auto">
+                                        <div class="bx-pager bx-default-pager">1 / 3 </div>
+                                        <div class="bx-controls-direction">
+                                            <a class="bx-prev" href>Prev</a>
+                                            <a class="bx-next" href>Next</a>
+                                        </div>
+                                        <div class="bx-controls-auto">
+                                            <div class="bx-controls-auto-item">
+                                                <a class="bx-stop" href>Stop</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+            </div>
+        </article>
+        <!-- 정윤선 -->
+        <article class="main_3 section" id="main_3">
+            <div id="main3" >
+                <div class="main3-wrap mid-sections">
+                    <div class="calendar-box">
+                        <div class="title">
+                            <h3>CALENDAR</h3>
+                            <a href="#" title="일정 더보기 버튼">
+                                <img src="/resources/common/img/culture_type02/more-btn-b.png" alt="일정 더보기 이미지"
+                                    title="일정 더보기 이미지">
+                            </a>
+                        </div>
+                        <div class="calendar-box" id="calendar-box">
+                            <script type="text/javascript">
+                                $(function () {
+                                    Date.prototype.format = function (f) {
+                                        if (!this.valueOf())
+                                            return " ";
+
+                                        var weekName = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+                                        var d = this;
+
+                                        return f.replace(/(yyyy|yy|MM|dd|E|hh|mm|ss|a\/p)/gi, function ($1) {
+                                            switch ($1) {
+                                                case "yyyy":
+                                                    return d.getFullYear();
+                                                case "yy":
+                                                    return (d.getFullYear() % 1000).zf(2);
+                                                case "MM":
+                                                    return (d.getMonth() + 1).zf(2);
+                                                case "dd":
+                                                    return d.getDate().zf(2);
+                                                case "E":
+                                                    return weekName[d.getDay()];
+                                                case "HH":
+                                                    return d.getHours().zf(2);
+                                                case "hh":
+                                                    return ((h = d.getHours() % 12) ? h : 12).zf(2);
+                                                case "mm":
+                                                    return d.getMinutes().zf(2);
+                                                case "ss":
+                                                    return d.getSeconds().zf(2);
+                                                case "a/p":
+                                                    return d.getHours() < 12 ? "오전" : "오후";
+                                                default:
+                                                    return $1;
+                                            }
+                                        });
+                                    };
+
+                                    String.prototype.string = function (len) {
+                                        var s = '', i = 0;
+                                        while (i++ < len) {
+                                            s += this;
+                                        }
+                                        return s;
+                                    };
+                                    String.prototype.zf = function (len) {
+                                        return "0".string(len - this.length) + this;
+                                    };
+                                    Number.prototype.zf = function (len) {
+                                        return this.toString().zf(len);
+                                    };
+
+                                    $('#before-btn').on(
+                                        'click',
+                                        function (e) {
+                                            var plan_date = new Date($(this).attr('keyValue'));
+                                            plan_date.setMonth(plan_date.getMonth() - 1);
+                                            //plan_date.format('yyyy-MM')
+                                            $('div#calendar-box').load('calendar3.do',
+                                                'plan_date=' + plan_date.format('yyyy-MM'));
+                                            e.preventDefault();
+                                        });
+                                    $('#next-btn').on(
+                                        'click',
+                                        function (e) {
+                                            var plan_date = new Date($(this).attr('keyValue'));
+                                            plan_date.setMonth(plan_date.getMonth() + 1);
+                                            $('div#calendar-box').load('calendar3.do',
+                                                'plan_date=' + plan_date.format('yyyy-MM'));
+                                            e.preventDefault();
+                                        });
+
+                                    $('span.showCal').on('click', function (e) {
+                                        var key = $(this).attr('keyValue');
+                                        $(".calAll").hide();
+                                        $("#popup_layer").show();
+                                        $("#" + key).show();
+                                        e.preventDefault();
+                                    });
+                                    $('.close').on('click', function (e) {
+                                        $("#popup_layer").hide();
+                                        $(".calAll").hide();
+                                    });
+
+                                });
+                            </script>
+                            <div id="calendar2">
+                                <div class="calendar-wrap">
+                                    <div class="cal-bord">
+                                        <div class="cal-func2">
+                                            <a id="before-btn" href="#prev" class="btn prev" keyvalue="2023-06"><img
+                                                    src="/resources/common/img/culture_type02/cal-prev-btn.png"
+                                                    alt="이전달"><span class="blind">이전달</span></a>
+                                            <p>2023</p>
+                                            <b>06</b>
+                                            <a id="next-btn" href="#next" class="btn next" keyvalue="2023-06"><img
+                                                    src="/resources/common/img/culture_type02/cal-next-btn.png"
+                                                    alt="다음달"><span class="blind">다음달</span></a>
+                                        </div>
+
+                                        <div class="calendar-info">
+                                            <span class="hu">휴관</span>
+                                            <span class="ev">행사</span>
+                                        </div>
+
+                                        <table class="cal-tbl">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            1</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            2</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="3">3</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            4</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="5">5</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="6">6</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            7</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            8</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            9</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="10">10</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            11</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="12">12</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            13</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            14</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            15</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            16</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="17">17</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            18</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="19">19</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            20</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            21</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            22</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            23</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="24">24</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            25</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="26">26</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            27</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            28</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            29</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            30</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="planView">
+                                            <div class="inbox" id="popup_layer" style="display: none;">
+                                                <div id="3" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-3</dt>
+                                                    </dl>
+                                                    [강좌]어린이 독서회 [Book쟁이...
+                                                    <br>
+                                                </div>
+                                                <div id="10" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-10</dt>
+                                                    </dl>
+                                                    [강좌]어린이 독서회 [Book쟁이...
+                                                    <br>
+                                                </div>
+                                                <div id="6" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-6</dt>
+                                                    </dl>
+                                                    [휴관일] 현충일<br>
+                                                </div>
+                                                <div id="19" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-19</dt>
+                                                    </dl>
+                                                    [휴관일] 정기휴관일<br>
+                                                </div>
+                                                <div id="5" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-5</dt>
+                                                    </dl>
+                                                    [휴관일] 정기휴관일<br>
+                                                </div>
+                                                <div id="17" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-17</dt>
+                                                    </dl>
+                                                    [강좌]어린이 독서회 [Book쟁이...
+                                                    <br>
+                                                </div>
+                                                <div id="24" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-24</dt>
+                                                    </dl>
+                                                    [강좌]어린이 독서회 [Book쟁이...
+                                                    <br>
+                                                </div>
+                                                <div id="26" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-26</dt>
+                                                    </dl>
+                                                    [휴관일] 정기휴관일<br>
+                                                </div>
+                                                <div id="12" class="calAll" style="display: none;">
+                                                    <dl>
+                                                        <dt>2023-06-12</dt>
+                                                    </dl>
+                                                    [휴관일] 정기휴관일<br>
+                                                </div>
+                                                <a href="#" class="close"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-box">
+                        <div class="title">
+                            <h3>EVENT</h3>
+                            <a href="/ul/module/teach/index.do?menu_idx=191&searchCate1=16,17" title="행사 더보기 버튼">
+                                <img src="/resources/common/img/culture_type02/more-btn-b.png" alt="행사 더보기 이미지"
+                                    title="행사 더보기 이미지">
+                            </a>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <div>
+                                            등록된 강좌가 없습니다.
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 박솔빈 -->
+
+        <article class="main_4 section" id="main_4">
+            <div >
+
+                <div class="main4-inner-left-up">
+                    <div class="main4-top-left" style="float: left;">
+                        <h2>
+                            <div class="stxt">NEW ARRIVAL BOOK</div>
+                            <div class="ltxt">신착도서</div>
+                        </h2>
+                    </div>
+                </div>
+                <div class="main4-inner-right-up">
+                    <div class="bookinfo-box">
+
+                        <div class="bookinfonew" style="float: right;">
+                            <div class="bx-wrapper">
+                                <div class="bx-viewport"
+                                    style="width: 25%; overflow: hidden; position: relative; height: 328px;">
+
+                                    <ul
+                                        style="width: auto; position: relative; transition-duration: 0.5s; transform: auto;">
+
+
+                                        <li class="item bx-clone"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300847&amp;vImg=https://shopping-phinf.pstatic.net/main_3358190/33581909627.20220722093443.jpg&amp;menu_idx=12">
+
+                                                <div class="bookimg">
+                                                    <img src="https://shopping-phinf.pstatic.net/main_3358190/33581909627.20220722093443.jpg"
+                                                        alt="에이블 : 1,200억 투자가의 마인드" title="에이블 : 1,200억 투자가의 마인드">
+                                                </div>
+                                                <div class="btxt">
+                                                    에이블 : 1,200억 투자가의 마인드</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300838&amp;vImg=https://shopping-phinf.pstatic.net/main_3707888/37078880628.20230216071303.jpg&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="https://shopping-phinf.pstatic.net/main_3707888/37078880628.20230216071303.jpg"
+                                                        alt="군중의 망상" title="군중의 망상">
+                                                </div>
+                                                <div class="btxt">
+                                                    군중의 망상</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300839&amp;vImg=https://shopping-phinf.pstatic.net/main_3847306/38473067631.20230314164510.jpg&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="https://shopping-phinf.pstatic.net/main_3847306/38473067631.20230314164510.jpg"
+                                                        alt="중화학공업화" title="중화학공업화">
+                                                </div>
+                                                <div class="btxt">
+                                                    중화학공업화</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300840&amp;vImg=https://shopping-phinf.pstatic.net/main_3804077/38040776620.20230313183507.jpg&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="https://shopping-phinf.pstatic.net/main_3804077/38040776620.20230313183507.jpg"
+                                                        alt="해커와 국가" title="해커와 국가">
+                                                </div>
+                                                <div class="btxt">
+                                                    해커와 국가</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300841&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/214/041/21404185.jpg&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/214/041/21404185.jpg"
+                                                        alt="남다른 방구석, 엄마의 새벽 4시" title="남다른 방구석, 엄마의 새벽 4시">
+                                                </div>
+                                                <div class="btxt">
+                                                    남다른 방구석, 엄마의 새벽 4시</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300842&amp;vImg=&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="/resources/homepage/gm/img/noimg1.png"
+                                                        alt="(똑똑한 두뇌 게임) 체스 왕" title="(똑똑한 두뇌 게임) 체스 왕">
+                                                </div>
+                                                <div class="btxt">
+                                                    (똑똑한 두뇌 게임) 체스 왕</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300843&amp;vImg=&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="/resources/homepage/gm/img/noimg1.png"
+                                                        alt="(똑똑한 두뇌 게임) 체스 왕 : 실전 편" title="(똑똑한 두뇌 게임) 체스 왕 : 실전 편">
+                                                </div>
+                                                <div class="btxt">
+                                                    (똑똑한 두뇌 게임) 체스 왕 : 실전 편</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300844&amp;vImg=https://shopping-phinf.pstatic.net/main_3472854/34728545619.20221019114538.jpg&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="https://shopping-phinf.pstatic.net/main_3472854/34728545619.20221019114538.jpg"
+                                                        alt="감추고 싶은 폴더" title="감추고 싶은 폴더">
+                                                </div>
+                                                <div class="btxt">
+                                                    감추고 싶은 폴더</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300845&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/162/144/16214429.jpg&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/162/144/16214429.jpg"
+                                                        alt="지적 대화를 위한 넓고 얕은 지식 . 1  현실 - 역사·경제·정치·사회·윤리"
+                                                        title="지적 대화를 위한 넓고 얕은 지식 . 1  현실 - 역사·경제·정치·사회·윤리">
+                                                </div>
+                                                <div class="btxt">
+                                                    지적 대화를 위한 넓고 얕은 지식 . 1 현실 - 역사·경제·정치·사회·윤리</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300846&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/162/144/16214430.jpg&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/162/144/16214430.jpg"
+                                                        alt="지적 대화를 위한 넓고 얕은 지식 . 2  현실 너머 - 철학·과학·예술·종교·신비 편"
+                                                        title="지적 대화를 위한 넓고 얕은 지식 . 2  현실 너머 - 철학·과학·예술·종교·신비 편">
+                                                </div>
+                                                <div class="btxt">
+                                                    지적 대화를 위한 넓고 얕은 지식 . 2 현실 너머 - 철학·과학·예술·종교·신비 편</div>
+                                            </a>
+                                        </li>
+                                        <li class="item"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300847&amp;vImg=https://shopping-phinf.pstatic.net/main_3358190/33581909627.20220722093443.jpg&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="https://shopping-phinf.pstatic.net/main_3358190/33581909627.20220722093443.jpg"
+                                                        alt="에이블 : 1,200억 투자가의 마인드" title="에이블 : 1,200억 투자가의 마인드">
+                                                </div>
+                                                <div class="btxt">
+                                                    에이블 : 1,200억 투자가의 마인드</div>
+                                            </a>
+                                        </li>
+                                        <li class="item bx-clone"
+                                            style="float: left; list-style: none; position: relative; width: 190px;">
+                                            <a
+                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300838&amp;vImg=https://shopping-phinf.pstatic.net/main_3707888/37078880628.20230216071303.jpg&amp;menu_idx=12">
+                                                <div class="bookimg">
+                                                    <img src="https://shopping-phinf.pstatic.net/main_3707888/37078880628.20230216071303.jpg"
+                                                        alt="군중의 망상" title="군중의 망상">
+                                                </div>
+                                                <div class="btxt">
+                                                    군중의 망상</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- controller 부분 자동 생성 -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div class="bottom-banner-wrap"></div>
+        <div class="section"></div>
+    </footer>
+    
+
+<script type="text/javascript">
+    function fullPage() {
+        var myFullpage = new fullpage('#fullpage', {
+            // anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+            navigation:true,
+            // showActiveTooltip: true,
+            // menu: '#menu',
+            // responsiveWidth: 1025,
+            // afterLoad: function(origin, destination, direction){
+            //     var cur_page = destination.index+1;
+            //     if (destination.index == 0 ) {
+            //         $('#header').removeClass("background-white");
+            //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+            //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+            //         $('.Gnb').css('background','#fff');
+            //         $('.tnb').css('background','#f2f2f2');
+            //     }  else if( destination.index == 1 ) {
+            //         $('#header').removeClass("background-white");
+            //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+            //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+            //         $('.Gnb').css('background','#fff');
+            //         $('.tnb').css('background','#f2f2f2');
+            //     }	else if( destination.index == 2 ) {
+            //         $('#header').removeClass("background-white");
+            //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+            //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+            //         $('.Gnb').css('background','#fff');
+            //         $('.tnb').css('background','#f2f2f2');
+            //     }  else if( destination.index == 3 ) {
+            //         $('#header').removeClass("background-white");
+            //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+            //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+            //         $('.Gnb').css('background','#fff');
+            //         $('.tnb').css('background','#f2f2f2');
+            //     } else {
+            //         $('#header').removeClass("background-white");
+            //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+            //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+            //         $('.Gnb').css('background','#fff');
+            //         $('.tnb').css('background','#f2f2f2');
+            //     }
+            // },
+            // afterResponsive: function(isResponsive){}
+        });
+    };
+    
+    fullPage();
+    
+</script>
+
+
+</body>
+
+</html>

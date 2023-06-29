@@ -10,16 +10,16 @@
 
 .main_2 .main1-inner-left {
     background: linear-gradient(75deg, #0088c1, #0058a2);
-    height: 100%;
+    width: calc(40%);
     float: left;
-    padding: 260px 0 140px ;
+    padding: 180px 0 80px;
 }
 .main_2 .main1-inner-right {
     width: calc(60%);
     position: relative;
     float: left;
     height: 100%;
-    padding: 260px 0 140px;
+    padding: 180px 0 80px;
 }
 
 .main_2 .notice-box .list ul li:nth-child(1) {
