@@ -29,6 +29,9 @@
     width: 90%;
     margin: 0 auto;
 }
+.main_1-inner-right{
+    display: none;
+}
 .main_1 .source{
     position: absolute;
     bottom: 10px;
