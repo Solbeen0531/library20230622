@@ -18,5 +18,10 @@
     font-weight: 500;
     word-break: keep-all;
     font-size: 15px;
-
+}
+.main_2 h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    word-break: keep-all;
 }
