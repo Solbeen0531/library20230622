@@ -108,7 +108,7 @@
         options = deepExtend({
             //navigation
             menu: false,
-            anchors:['firstPage', 'secondPage', '3rdPage', '4thPage'],
+            anchors:['firstPage', 'secondPage', '3rdPage', '4thPage', 'undefined'],
             lockAnchors: false,
             navigation: false,
             navigationPosition: 'right',
