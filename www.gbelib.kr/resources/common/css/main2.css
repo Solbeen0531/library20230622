@@ -127,6 +127,10 @@
     height:  26px;
     font-size: 0;
 }
+.main_2 .main1-inner-right .popupzonenew ul li a img {
+    width: 100%;
+    height: auto;
+}
 
 .main_2 img {
     max-width: 100%;
@@ -156,3 +160,4 @@
     color: #666;
     font-weight: 500;
 }
+
