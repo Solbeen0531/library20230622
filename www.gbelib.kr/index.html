@@ -103,7 +103,7 @@
     </header>
     <section id="fullpage" class="fullpage-wrapper"
         style="transform: translate3d(0px, 0px, 0px); transition: all 700mx ease 0s; height: 100%; position: relative; touch-action: none;">
-        <article class="main_1 section fp-section active fp-table fp-completely" data-fp-styles="null" data-anchor="firstPage" style="height: 800px;"> <!--박준모-->
+        <article class="main_1 section fp-section active fp-table" data-fp-styles="null" data-anchor="firstPage" style="height: 800px;"> <!--박준모-->
         <!--박준모-->    
             <div id="main_1" class="fp-tableCell" style="height: 800px;">
                 <div class="source">
@@ -204,7 +204,7 @@
             </div>
         </article>
 
-        <article class="main_2 section fp-section fp-table active fp-completely" id="main_2" data-fp-styles="null" data-anchor="secondPage">
+        <article class="main_2 section fp-section fp-table active" id="main_2" data-fp-styles="null" data-anchor="3rd">
             <!-- 임지연 -->
             <div id="main1" class="section fp-section fp-table active fp-completely" data-fp-styles="null"
                 style="height: 800px;" data-anchor="secondPage">
@@ -302,7 +302,7 @@
 
         </article>
         <!-- 정윤선 -->
-        <article class="main_3 section fp-section fp-table active fp-completely" id="main_3" data-fp-styles="null" data-anchor="3rdPage">
+        <article class="main_3 section fp-section fp-table active" id="main_3" data-fp-styles="null" data-anchor="3rdPage">
             <div id="main3" class="section fp-table" style="height: 800px;">
                 <div class="main3-wrap mid-sections">
                     <div class="calendar-box">
@@ -687,7 +687,7 @@
 
         <!-- 박솔빈 -->
 
-        <article class="main_4 section fp-section fp-table active fp-completely" id="main_4" data-fp-styles="null" data-anchor="4thPage" style=height:800px;>
+        <article class="main_4 section fp-section fp-table active" id="main_4" data-fp-styles="null" data-anchor="4thPage" style=height:800px;>
             <div class="fp-tableCell" style="height: 800px;">
 
                 <div class="main4-inner-left-up">
@@ -906,108 +906,33 @@
                 </div>
 
         </article>
-
     </section>
-<script type="text/javascript">
-        
-function fullPage() {
-	var myFullpage = new fullpage('#fullpage', {
-		anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
-		navigation:true,
-		showActiveTooltip: true,
-		menu: '#menu',
-		responsiveWidth: 1025,
-		afterLoad: function(origin, destination, direction){
-			var cur_page = destination.index+1;
-			if (destination.index == 0 ) {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			}  else if( destination.index == 1 ) {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			}	else if( destination.index == 2 ) {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			}  else if( destination.index == 3 ) {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			} else {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			}
-		},
-		afterResponsive: function(isResponsive){}
-	});
-};
 
-fullPage();
-
-// 모바일일 경우 fullpage 미사용
-if ( $(window).width() < 1025 ) {
-	if ($('#fullpage').hasClass('fp-destroyed')){
-	} else {
-		fullpage_api.destroy('all');
-	}
-} else {
-	fullPage();
-};
-
-// 리사이즈 될때 모바일 화면에서 fullpage 미사용
-$( window ).resize( function(e) {
-	if ( $(window).width() < 1025 ) {
-		if ($('#fullpage').hasClass('fp-destroyed')){
-		} else {
-			fullpage_api.destroy('all');
-		}
-	} else {
-		fullPage();
-	};
-});
-
-</script>
-    
-        </article>
-        </section>
-        <section >
+    <section >
         <div id="fp-nav" class="fp-right fp-show-active" style="margin-top: -65.5px;">
             <ul>
                 <li>
-                    <a href="#firstPage" class="active"></a>
+                    <a href="#firstPage" class=""></a>
                     <span class="fp-sr-only">fistPage</span>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#secondPage" class="active"></a>
+                    <a href="#secondPage" class=""></a>
                     <span class="fp-sr-only">secondPage</span>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#3rdPage" class="active"></a>
+                    <a href="#3rdPage" class=""></a>
                     <span class="fp-sr-only">3rdPage</span>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#4thPage" class="active"></a>
+                    <a href="#4thPage" class=""></a>
                     <span class="fp-sr-only">4thtPage</span>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#undefined" class="active"></a>
+                    <a href="#undefined" class=""></a>
                     <span class="fp-sr-only">Section 5</span>
                     <span></span>
                 </li>
@@ -1021,7 +946,76 @@ $( window ).resize( function(e) {
     </footer>
     
 
-
+<script type="text/javascript">
+    function fullPage() {
+        var myFullpage = new fullpage('#fullpage', {
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+            navigation:true,
+            showActiveTooltip: true,
+            menu: '#menu',
+            responsiveWidth: 1025,
+            afterLoad: function(origin, destination, direction){
+                var cur_page = destination.index+1;
+                if (destination.index == 0 ) {
+                    $('#header').removeClass("background-white");
+                    $('.Gnb').css('border-top','1px solid #e6e6e6');
+                    $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                    $('.Gnb').css('background','#fff');
+                    $('.tnb').css('background','#f2f2f2');
+                }  else if( destination.index == 1 ) {
+                    $('#header').removeClass("background-white");
+                    $('.Gnb').css('border-top','1px solid #e6e6e6');
+                    $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                    $('.Gnb').css('background','#fff');
+                    $('.tnb').css('background','#f2f2f2');
+                }	else if( destination.index == 2 ) {
+                    $('#header').removeClass("background-white");
+                    $('.Gnb').css('border-top','1px solid #e6e6e6');
+                    $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                    $('.Gnb').css('background','#fff');
+                    $('.tnb').css('background','#f2f2f2');
+                }  else if( destination.index == 3 ) {
+                    $('#header').removeClass("background-white");
+                    $('.Gnb').css('border-top','1px solid #e6e6e6');
+                    $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                    $('.Gnb').css('background','#fff');
+                    $('.tnb').css('background','#f2f2f2');
+                } else {
+                    $('#header').removeClass("background-white");
+                    $('.Gnb').css('border-top','1px solid #e6e6e6');
+                    $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                    $('.Gnb').css('background','#fff');
+                    $('.tnb').css('background','#f2f2f2');
+                }
+            },
+            afterResponsive: function(isResponsive){}
+        });
+    };
+    
+    fullPage();
+    
+    // 모바일일 경우 fullpage 미사용
+    if ( $(window).width() < 1025 ) {
+        if ($('#fullpage').hasClass('fp-destroyed')){
+        } else {
+            fullpage_api.destroy('all');
+        }
+    } else {
+        fullPage();
+    };
+    
+    // 리사이즈 될때 모바일 화면에서 fullpage 미사용
+    $(window).resize( function(e) {
+        if ( $(window).width() < 1025 ) {
+            if ($('#fullpage').hasClass('fp-destroyed')){
+            } else {
+                fullpage_api.destroy('all');
+            }
+        } else {
+            fullPage();
+        };
+    });
+</script>
 
 
 </body>
