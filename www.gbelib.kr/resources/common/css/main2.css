@@ -62,7 +62,7 @@
     -webkit-box-orient: vertical;
 }
 
-.main_2 a {
+.main_2 .list a {
     font-size: 18px;
     color: #fff;
     font-weight: 500;
@@ -89,9 +89,7 @@
 }
 .main_2 .notice-box .title a {
     position: absolute;
-    top: 130px;
-    bottom: 11px;
-    right: 0px;
+
 }
 
 .main_2 .notice-box {
@@ -151,12 +149,12 @@
     word-break: keep-all;
     font-size: 15px;
 }
-.main_2 h3 {
+/* .main_2 h3 {
     margin: 0;
     padding: 0;
     line-height: 150%;
     word-break: keep-all;
-}
+} */
 /* default_new_full font ... */
 .main_2  div{
     margin: 0;
