@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>울릉도서관</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    
+    <link rel="stylesheet" href="/resources/common/css/reset.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="/resources/common/css/main_1.css">
+    <link rel="stylesheet" href="/resources/common/css/main3.css">
+    <link rel="stylesheet" href="/resources/common/css/culture_type02.css">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
+    <style>
+        /* .test1{
+            padding: 20px;
+            border: 3px black solid;
+        } */
+    </style>
+      <!-- main2: 공지사항, 팝업존 -->
+      <script>
+        $(document).ready(function () {
+            // 팝업존
+            if ($('div.popupzonenew ul').length > 0) {
+                $('div.popupzonenew ul').bxSlider({
+                    mode: 'vertical',
+                    auto: true,
+                    autoHover: true,
+                    speed: 10,
+                    pager: true,
+                    pagerType: 'short',
+                    auto: true,
+                    //controller 부분 자동 생성
+                    autoControls: true,
+                    autoControlsCombine: true
+                });
+            }
+        });
+
+    </script>
+</head>
+
+<body >
+    <header>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quos eius tempore, velit quae fugit minima officia recusandae tempora ex magnam repudiandae nesciunt iste autem possimus! Consequatur sint ab vitae.</p>
+    </header>
+    <section id="fullpage">
+        <article class=" section ">
+aaaaa
+        </article>
+        <article class=" section ">
+            <div class="main1-inner-right">
+                 <div class="popupzone-box">
+                     <div class="title">
+                         <h3>팝업존</h3>
+                     </div>
+                     <div class="popupzonenew">
+                         <div class="bx-wrapper" style="max-width: 100%;">
+                             <div class="bx-viewport"
+                                 style="width: 100%; overflow: hidden; position: relative; height: 379px;">
+                                 <ul style="width: auto; position: relative;">
+                                     <li>
+                                         <a
+                                             href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&amp;manage_idx=528&amp;board_idx=244560">
+                                             <img alt="5월 휴관" src="/data/popupZone/h26/1685665582984.jpg"></a>
+                                     </li>
+                                     <li>
+                                         <a href=" ">
+                                             <img alt="두배로" src="/data/popupZone/h26/1683605178662.jpg"></a>
+                                     </li>
+                                     <li>
+                                         <a
+                                             href="https://www.gbelib.kr/ul/board/index.do?menu_idx=21&amp;manage_idx=529">
+                                             <img alt="5,6 추천도서" src="/data/popupZone/h26/1683081896240.jpg"></a>
+                                     </li>
+                                 </ul>
+                             </div>
+                             <!-- controller 부분 자동 생성 -->
+                            
+                         </div>
+                     </div>
+                 </div>
+             </div>
+bbbbb
+        </article>
+        <article class=" section ">
+ccccc
+        </article>
+        <article class=" section ">
+ddddd
+        </article>
+    </section>
+    <header>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quos eius tempore, velit quae fugit minima officia recusandae tempora ex magnam repudiandae nesciunt iste autem possimus! Consequatur sint ab vitae.</p>
+    </header>
+<script type="text/javascript">
+    function fullPage() {
+        var myFullpage = new fullpage('#fullpage', {
+            // menu: '#menu',
+            // autoSrolling:true,
+            // scrollHorizontally: true  ,
+            // lockAnchors:false,
+            // anchors:['section1', 'section2','section3', 'section4'],
+            navigation: true,
+            // navigationPosition: 'right',
+            // navigationTooltips:['firstSlide','secondSlide'],
+            // showActiveTooltips:false,
+            // slidesNavigation:false,
+            
+            // slidesNavPosition:'bottom',
+            // slidesNavigation: true,
+            // showActiveTooltip: true,
+
+        });
+    };
+    fullPage();
+</script>
+
+</body>
+</html>

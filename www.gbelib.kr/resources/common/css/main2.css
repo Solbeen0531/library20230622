@@ -1,25 +1,31 @@
+/* notice_type04.css */
 .main_2{
     overflow: hidden;
+    
 }
-.main_2 .main1-inner-left {
-    width: calc(40%);
+.main_2 #main1 {
+    position: relative;
+    overflow: hidden;
+    height: 800px;
 }
+
 .main_2 .main1-inner-left {
     background: linear-gradient(75deg, #0088c1, #0058a2);
-    height: 100%;
+    width: calc(40%);
     float: left;
-    padding: 260px 0 140px ;
+    height: 800px;
+    display: flex;
+    align-items: center;
 }
 .main_2 .main1-inner-right {
     width: calc(60%);
     position: relative;
     float: left;
-    height: 100%;
-    padding: 260px 0 140px;
+    height: 800px;
+    display: flex;
+    align-items: center;
 }
-.main_2 .popupzone-box{
-    width: 85%;
-}
+
 .main_2 .notice-box .list ul li:nth-child(1) {
     height: 120px;
     border: 1px solid #fff;
@@ -86,11 +92,72 @@
     margin-left: 11%;
 }
 
-span{
+.main_2 span{
     margin: 0px;
     padding: 0px;
     border: 0px;
     font: inherit;
     vertical-align: baseline;
+}
+
+/* right */
+.main_2 .main1-inner-right .title h3 {
+    color: #333;
+    font-size: 33px;
+    letter-spacing: -0.5px;
+    font-weight: 600;
+}
+.main_2 .main1-inner-right .title {
+    text-align: left;
+}
+.main_2 .popupzone-box{
+    width: 85%;
+    margin-left: 5%;
+}
+.main_2 .main1-inner-right .popupzonenew .bx-prev {
+    background-image: url(/resources/common/img/notice_type03/popupzone-prev-btn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    right: 78px;
+}
+.main_2 .main1-inner-right .popupzonenew .bx-prev {
+    position: absolute;
+    width:  26px;
+    height:  26px;
+    font-size: 0;
+}
+.main_2 .main1-inner-right .popupzonenew ul li a img {
+    width: 100%;
+    height: auto;
+}
+
+.main_2 img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.main_2 ul li {
+    margin: 0;
+    line-height: 150%;
+    color: #666;
+    font-weight: 500;
+    word-break: keep-all;
+    font-size: 15px;
+}
+.main_2 h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    word-break: keep-all;
+}
+/* default_new_full font ... */
+.main_2  div{
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    word-break: keep-all;
+    font-size: 15px;
+    color: #666;
+    font-weight: 500;
 }
 

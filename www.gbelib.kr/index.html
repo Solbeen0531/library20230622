@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>울릉도서관</title>
-    <link rel="stylesheet" href="/resources/common/css/reset.css">
-    <link rel="stylesheet" href="/resources/common/css/main_1.css">
+    <title>울릉도서관P</title>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <link href="/resources/common/css/notice_type04.css" rel="stylesheet">
-    <link href="/resources/common/css/default_new_fullpage.css" rel="stylesheet">
-    <link href="/resources/common/css/jquery.fullpage.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/resources/common/css/reset.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="/resources/common/css/main_1.css">
+    <link rel="stylesheet" href="/resources/common/css/main2.css">
     <link rel="stylesheet" href="/resources/common/css/main3.css">
     <link rel="stylesheet" href="/resources/common/css/culture_type02.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="/resources/common/js/jquery.fullpage.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
     <!-- main2: 공지사항, 팝업존 -->
     <script>
         $(document).ready(function () {
-
             // 팝업존
             if ($('div.popupzonenew ul').length > 0) {
                 $('div.popupzonenew ul').bxSlider({
@@ -36,7 +37,6 @@
                     autoControls: true,
                     autoControlsCombine: true
                 });
-
             }
         });
 
@@ -61,69 +61,59 @@
     <script>
         // 책 소개 관련 
 
-        $(document).ready(function () {
+        // $(document).ready(function () {
+        //     // 책 소개
+        //     if ($('div.bookinfonew ul').length > 0) {
+        //         $('div.bookinfonew ul').bxSlider({
+        //             mode: 'horizontal',
+        //             slideMargin: 5,
+        //             auto: true,
+        //             autoHover: true,
+        //             speed: 500,
+        //             pager: false,
+        //             pagerType: 'short',
+        //             auto: true,
+        //             moveSlides: 5,
 
+        //             //controller 부분 자동 생성
+        //             autoControls: true,
+        //             autoControlsCombine: true
+        //         });
+        //     }
 
-            // 책 소개
-            if ($('div.bookinfonew ul').length > 0) {
-                $('div.bookinfonew ul').bxSlider({
-                    mode: 'horizontal',
-                    slideMargin: 5,
-                    auto: true,
-                    autoHover: true,
-                    speed: 500,
-                    pager: false,
-                    pagerType: 'short',
-                    auto: true,
-                    moveSlides: 5,
-
-                    //controller 부분 자동 생성
-                    autoControls: true,
-                    autoControlsCombine: true
-                });
-            }
-
-        });
+        // });
 
     </script>
 
 
-    <!-- main4: 책 소개 -->
-    <style>
-
-    </style>
 </head>
 
-
 <body class="fp-viewing-secondPage" style="overflow: hidden; height: 100%;">
-
-
     <header class="header">
         <div class="slider">
             <div>I am a slide.</div>
             <div>I am another slide.</div>
         </div>
     </header>
-    <section id="fullpage" class="fullpage-wrapper"
-        style="transform: translate3d(0px, 0px, 0px); transition: all 700mx ease 0s; height: 100%; position: relative; touch-action: none;">
-        <article class="main_1 section fp-section active fp-table fp-completely" data-fp-styles="null" data-anchor="firstPage" style="height: 800px;"> <!--박준모-->
-        <!--박준모-->    
-            <div id="main_1" class="fp-tableCell" style="height: 800px;">
+    <section id="fullpage">
+        <article class="main_1 section">
+            <!--박준모-->
+            <div id="main_1">
                 <div class="source">
                     <p>출처: 울릉홍보관 2022년 독도 풍경</p>
                 </div>
                 <div class="main_1_wrap">
                     <div class="sections">
                         <div class="main_1-box-top">
-                             <div class="main_1-inner-left">
+                            <div class="main_1-inner-left">
                                 <div class="slogan">
                                     <p class="text-01">경상북도교육청 울릉도서관</p>
                                     <p class="text-02">
-                                            "책 읽는 작은 여유가"
-                                            <br>
-                                            "마음 속의"
-                                            <br>
-                                            "큰 행복입니다!"
+                                        "책 읽는 작은 여유가"
+                                        <br>
+                                        "마음 속의"
+                                        <br>
+                                        "큰 행복입니다!"
                                     </p>
                                 </div>
                                 <div class="search">
@@ -207,87 +197,91 @@
             </div>
         </article>
 
-        <article class="main_2 section fp-section fp-table active fp-completely" id="main_2" data-fp-styles="null" data-anchor="secondPage">
+        <article class="main_2 section" id="main_2">
             <!-- 임지연 -->
-            <div class="main1-inner-left">
-                <div class="notice-box"> <!--공지사항에 관한 것-->
-                    <div class="title"> <!--공지사항에 관한 것-->
-                        <h3>공지사항</h3>
-                        <a href="http://www.gbelib.kr/ul/board/index.do?menu_idx=58&manage_idx=528"
-                            title="공지사항 더보기 버튼"><img src="/resources/common/img/notice_type04/more-btn.png"
-                                alt="공지사항 더보기 이미지" title="공지사항 더보기 이미지"></a>
-                    </div>
-                    <div class="list">
-                        <ul>
+            <div id="main1">
+                <!--공지사항에 관한 것-->
+                <div class="main1-inner-left">
+                    <div class="notice-box">
+                        <div class="title">
+                            <h3>공지사항</h3>
+                            <a href="http://www.gbelib.kr/ul/board/index.do?menu_idx=58&manage_idx=528"
+                                title="공지사항 더보기 버튼"><img src="/resources/common/img/notice_type04/more-btn.png"
+                                    alt="공지사항 더보기 이미지" title="공지사항 더보기 이미지"></a>
+                        </div>
+                        <div class="list">
                             <ul>
-                                <li><a href="#" title="게시글 자세히 보기">울릉도서관 6월 휴관일 안내</a><span>2023-06-02</span></li>
-                                <li><a href="#" title="게시글 자세히 보기"> 2023년 상반기 평생교육 강좌 만족도 설문조사
-                                        안내</a><span>2023-05-31</span>
-                                </li>
-                                <li><a href="#" title="게시글 자세히 보기"> 울릉도서관 5월 휴관일 안내</a><span>2023-04-30</span></li>
-                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=242277"
-                                        title="게시글 자세히 보기"> 🎉 제 59회 도서관주간 및 세계 책의 날 행사 안내</a><span>2023-04-04</span>
-                                </li>
-                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=241203"
-                                        title="게시글 자세히 보기"> 어린이 독서회 [Book쟁이] 회원 모집</a><span>2023-03-14</span>
+                                <ul>
+                                    <li><a href="#" title="게시글 자세히 보기">울릉도서관 6월 휴관일 안내</a><span>2023-06-02</span>
+                                    </li>
+                                    <li><a href="#" title="게시글 자세히 보기"> 2023년 상반기 평생교육 강좌 만족도 설문조사
+                                            안내</a><span>2023-05-31</span>
+                                    </li>
+                                    <li><a href="#" title="게시글 자세히 보기"> 울릉도서관 5월 휴관일 안내</a><span>2023-04-30</span>
+                                    </li>
+                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=242277"
+                                            title="게시글 자세히 보기"> 🎉 제 59회 도서관주간 및 세계 책의 날 행사
+                                            안내</a><span>2023-04-04</span>
+                                    </li>
+                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=241203"
+                                            title="게시글 자세히 보기"> 어린이 독서회 [Book쟁이] 회원 모집</a><span>2023-03-14</span>
 
-                                </li>
-                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240652"
-                                        title="게시글 자세히 보기"> 디지털 자료실 이용 제한 안내</a><span>2023-02-28</span></li>
-                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240433"
-                                        title="게시글 자세히 보기"> 울릉도서관 삼일절(3. 1.) 휴관 안내</a><span>2023-02-23</span>
-                                </li>
-                                <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240421"
-                                        title="게시글 자세히 보기"> 울릉도서관 화장실 보수 공사 안내</a><span>2023-02-22</span></li>
-                            </ul>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="main1-inner-right">
-                <div class="popupzone-box">
-                    <div class="title">
-                        <h3>팝업존</h3>
-                    </div>
-                    <div class="popupzonenew">
-                        <div class="bx-wrapper" style="max-width: 100%;">
-                            <div class="bx-viewport"
-                                style="width: 100%; overflow: hidden; position: relative; height: 379px;">
-                                <ul style="width: auto; position: relative;">
-                                    <li>
-                                        <a
-                                            href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&amp;manage_idx=528&amp;board_idx=244560">
-                                            <img alt="5월 휴관"
-                                                src="http://www.gbelib.kr/data/popupZone/h26/1683081896240"></a>
                                     </li>
-                                    <li>
-                                        <a href=" ">
-                                            <img alt="두배로"
-                                                src="http://www.gbelib.kr/data/popupZone/h26/1683605178662"></a>
+                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240652"
+                                            title="게시글 자세히 보기"> 디지털 자료실 이용 제한 안내</a><span>2023-02-28</span></li>
+                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240433"
+                                            title="게시글 자세히 보기"> 울릉도서관 삼일절(3. 1.) 휴관 안내</a><span>2023-02-23</span>
                                     </li>
-                                    <li>
-                                        <a
-                                            href="https://www.gbelib.kr/ul/board/index.do?menu_idx=21&amp;manage_idx=529">
-                                            <img alt="5,6 추천도서"
-                                                src="http://www.gbelib.kr//data/popupZone/h26/1683081896240"></a>
-                                    </li>
+                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240421"
+                                            title="게시글 자세히 보기"> 울릉도서관 화장실 보수 공사 안내</a><span>2023-02-22</span></li>
                                 </ul>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 팝업존에 관한 것 -->
+                <div class="main1-inner-right">
+                    <div class="popupzone-box">
+                        <div class="title">
+                            <h3>팝업존</h3>
+                        </div>
+                        <div class="popupzonenew">
+                            <div class="bx-wrapper" style="max-width: 100%;">
+                                <div class="bx-viewport"
+                                    style="width: 100%; overflow: hidden; position: relative; height: 379px;">
+                                    <ul style="width: auto; position: relative;">
+                                        <li>
+                                            <a
+                                                href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&amp;manage_idx=528&amp;board_idx=244560">
+                                                <img alt="5월 휴관" src="/data/popupZone/h26/1685665582984.jpg"></a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">
+                                                <img alt="두배로" src="/data/popupZone/h26/1683605178662.jpg"></a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.gbelib.kr/ul/board/index.do?menu_idx=21&amp;manage_idx=529">
+                                                <img alt="5,6 추천도서" src="/data/popupZone/h26/1683081896240.jpg"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- controller 부분 자동 생성 -->
+
                             </div>
-                            <!-- controller 부분 자동 생성 -->
-                            <div class="bx-controls bx-has-pager bx-has-controls-direction bx-has-controls-auto">
-                                <div class="bx-pager bx-default-pager"> </div>
-                            </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
-
         </article>
         <!-- 정윤선 -->
+<<<<<<< HEAD
         <!-- https://www.educba.com/bootstrap-calendar/ -->
         <article class="main_3 section fp-section fp-table active fp-completely" id="main_3" data-fp-styles="null" data-anchor="3rdPage">
             <div id="main3" class="section fp-table" style="height: 800px;">
+=======
+
                 <div class="main3-wrap mid-sections">
                     <div class="calendar-box">
                         <div class="title">
@@ -671,345 +665,713 @@
 
         <!-- 박솔빈 -->
 
-        <article class="main_4 section fp-section fp-table active fp-completely" id="main_4" data-fp-styles="null" data-anchor="4thPage" style=height:800px;>
-            <div class="fp-tableCell" style="height: 800px;">
+        <article class="main_4 section" id="main_4">
+            <div>
+                <script>
+                    $(function () {
+                        var _width = $(window).width();
+                        var _bookListTop;
+                        var _bookListBottom;
 
-                <div class="main4-inner-left-up">
-                    <div class="main4-top-left" style="float: left;">
-                        <h2>
-                            <div class="stxt">NEW ARRIVAL BOOK</div>
-                            <div class="ltxt">신착도서</div>
-                        </h2>
-                    </div>
-                </div>
+                        var Books = function () {
+                            try {
+                                if (_bookListTop) _bookListTop.destroySlider();
+                                if (_bookListBottom) _bookListBottom.destroySlider();
+                            } catch (e) {
+                                // TODO: handle exception
+                            }
 
+                            if (_width <= 380) {
+                                _bookListTop = $('.bookListTop ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 1,
+                                    slideWidth: 190,
+                                    slideMargin: 0
+                                });
 
+                                _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 1,
+                                    slideWidth: 190,
+                                    slideMargin: 0
+                                });
+                            }
+                            else if (_width <= 550 && _width > 380) {
+                                _bookListTop = $('.bookListTop ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 2,
+                                    slideWidth: 190,
+                                    slideMargin: 0
+                                });
 
+                                _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 2,
+                                    slideWidth: 190,
+                                    slideMargin: 0
+                                });
+                            }
+                            else if (_width <= 768 && _width > 550) {
+                                _bookListTop = $('.bookListTop ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 3,
+                                    slideWidth: 190,
+                                    slideMargin: 10
+                                });
 
-                <div class="main4-inner-right-up">
-                    <div class="bookinfo-box">
+                                _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 3,
+                                    slideWidth: 190,
+                                    slideMargin: 10
+                                });
+                            }
+                            else if (_width <= 1024 && _width > 768) {
+                                _bookListTop = $('.bookListTop ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 4,
+                                    slideWidth: 190,
+                                    slideMargin: 20
+                                });
 
-                        <div class="bookinfonew" style="float: right;">
-                            <div class="bx-wrapper">
-                                <div class="bx-viewport"
-                                    style="width: 25%; overflow: hidden; position: relative; height: 328px;">
+                                _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 4,
+                                    slideWidth: 190,
+                                    slideMargin: 20
+                                });
+                            }
+                            else if (_width <= 1600 && _width > 1024) {
+                                _bookListTop = $('.bookListTop ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 4,
+                                    slideWidth: 190,
+                                    slideMargin: 10
+                                });
 
-                                    <ul
-                                        style="width: auto; position: relative; transition-duration: 0.5s; transform: auto;">
+                                _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 4,
+                                    slideWidth: 190,
+                                    slideMargin: 20
+                                });
+                            }
+                            else {
+                                _bookListTop = $('.bookListTop ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 5,
+                                    slideWidth: 190,
+                                    slideMargin: 30
+                                });
 
-
-                                        <li class="item bx-clone"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300847&amp;vImg=https://shopping-phinf.pstatic.net/main_3358190/33581909627.20220722093443.jpg&amp;menu_idx=12">
-
-                                                <div class="bookimg">
-                                                    <img src="https://shopping-phinf.pstatic.net/main_3358190/33581909627.20220722093443.jpg"
-                                                        alt="에이블 : 1,200억 투자가의 마인드" title="에이블 : 1,200억 투자가의 마인드">
-                                                </div>
-                                                <div class="btxt">
-                                                    에이블 : 1,200억 투자가의 마인드</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300838&amp;vImg=https://shopping-phinf.pstatic.net/main_3707888/37078880628.20230216071303.jpg&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="https://shopping-phinf.pstatic.net/main_3707888/37078880628.20230216071303.jpg"
-                                                        alt="군중의 망상" title="군중의 망상">
-                                                </div>
-                                                <div class="btxt">
-                                                    군중의 망상</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300839&amp;vImg=https://shopping-phinf.pstatic.net/main_3847306/38473067631.20230314164510.jpg&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="https://shopping-phinf.pstatic.net/main_3847306/38473067631.20230314164510.jpg"
-                                                        alt="중화학공업화" title="중화학공업화">
-                                                </div>
-                                                <div class="btxt">
-                                                    중화학공업화</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300840&amp;vImg=https://shopping-phinf.pstatic.net/main_3804077/38040776620.20230313183507.jpg&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="https://shopping-phinf.pstatic.net/main_3804077/38040776620.20230313183507.jpg"
-                                                        alt="해커와 국가" title="해커와 국가">
-                                                </div>
-                                                <div class="btxt">
-                                                    해커와 국가</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300841&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/214/041/21404185.jpg&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/214/041/21404185.jpg"
-                                                        alt="남다른 방구석, 엄마의 새벽 4시" title="남다른 방구석, 엄마의 새벽 4시">
-                                                </div>
-                                                <div class="btxt">
-                                                    남다른 방구석, 엄마의 새벽 4시</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300842&amp;vImg=&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="/resources/homepage/gm/img/noimg1.png"
-                                                        alt="(똑똑한 두뇌 게임) 체스 왕" title="(똑똑한 두뇌 게임) 체스 왕">
-                                                </div>
-                                                <div class="btxt">
-                                                    (똑똑한 두뇌 게임) 체스 왕</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300843&amp;vImg=&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="/resources/homepage/gm/img/noimg1.png"
-                                                        alt="(똑똑한 두뇌 게임) 체스 왕 : 실전 편" title="(똑똑한 두뇌 게임) 체스 왕 : 실전 편">
-                                                </div>
-                                                <div class="btxt">
-                                                    (똑똑한 두뇌 게임) 체스 왕 : 실전 편</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300844&amp;vImg=https://shopping-phinf.pstatic.net/main_3472854/34728545619.20221019114538.jpg&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="https://shopping-phinf.pstatic.net/main_3472854/34728545619.20221019114538.jpg"
-                                                        alt="감추고 싶은 폴더" title="감추고 싶은 폴더">
-                                                </div>
-                                                <div class="btxt">
-                                                    감추고 싶은 폴더</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300845&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/162/144/16214429.jpg&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/162/144/16214429.jpg"
-                                                        alt="지적 대화를 위한 넓고 얕은 지식 . 1  현실 - 역사·경제·정치·사회·윤리"
-                                                        title="지적 대화를 위한 넓고 얕은 지식 . 1  현실 - 역사·경제·정치·사회·윤리">
-                                                </div>
-                                                <div class="btxt">
-                                                    지적 대화를 위한 넓고 얕은 지식 . 1 현실 - 역사·경제·정치·사회·윤리</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300846&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/162/144/16214430.jpg&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/162/144/16214430.jpg"
-                                                        alt="지적 대화를 위한 넓고 얕은 지식 . 2  현실 너머 - 철학·과학·예술·종교·신비 편"
-                                                        title="지적 대화를 위한 넓고 얕은 지식 . 2  현실 너머 - 철학·과학·예술·종교·신비 편">
-                                                </div>
-                                                <div class="btxt">
-                                                    지적 대화를 위한 넓고 얕은 지식 . 2 현실 너머 - 철학·과학·예술·종교·신비 편</div>
-                                            </a>
-                                        </li>
-                                        <li class="item"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300847&amp;vImg=https://shopping-phinf.pstatic.net/main_3358190/33581909627.20220722093443.jpg&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="https://shopping-phinf.pstatic.net/main_3358190/33581909627.20220722093443.jpg"
-                                                        alt="에이블 : 1,200억 투자가의 마인드" title="에이블 : 1,200억 투자가의 마인드">
-                                                </div>
-                                                <div class="btxt">
-                                                    에이블 : 1,200억 투자가의 마인드</div>
-                                            </a>
-                                        </li>
-                                        <li class="item bx-clone"
-                                            style="float: left; list-style: none; position: relative; width: 190px;">
-                                            <a
-                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004300838&amp;vImg=https://shopping-phinf.pstatic.net/main_3707888/37078880628.20230216071303.jpg&amp;menu_idx=12">
-                                                <div class="bookimg">
-                                                    <img src="https://shopping-phinf.pstatic.net/main_3707888/37078880628.20230216071303.jpg"
-                                                        alt="군중의 망상" title="군중의 망상">
-                                                </div>
-                                                <div class="btxt">
-                                                    군중의 망상</div>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                    auto: true,
+                                    autoHover: true,
+                                    speed: 500,
+                                    pager: false,
+                                    moveSlides: 1,
+                                    maxSlides: 5,
+                                    slideWidth: 190,
+                                    slideMargin: 30
+                                });
+                            }
+                        };
+                        Books();
+                        $(window).on('resize', function () {
+                            _width = $(window).width();
+                            Books();
+                        });
+                    });
+                </script>
+                <div class="main4-top-wrap">
+                    <div class="main4-top">
+                        <div class="mid-sections">
+                            <div class="main4-top-left">
+                                <div class="title">
+                                    <h2>
+                                        <div class="stxt">NEW ARRIVAL BOOK</div>
+                                        <div class="ltxt">신착도서</div>
+                                    </h2>
+                                    <a href="/ul/intro/search/newBook/index.do?menu_idx=12" class="more"><img
+                                            src="/resources/common/img/book_type01/book-more-btn.png" alt="더보기"></a>
                                 </div>
-                                <!-- controller 부분 자동 생성 -->
-
                             </div>
+
+                            <div class="main4-top-right">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div class="bookListTop">
+                                            <div class="bx-wrapper" style="max-width: 590px; margin: 0px auto;">
+                                                <div class="bx-viewport"
+                                                    style="width: 100%; overflow: hidden; position: relative; height: 328px;">
+
+                                                    <ul
+                                                        style="width: 1215%; position: relative; transition-duration: 0.5s; transform: translate3d(-1000px, 0px, 0px);">
+
+
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320345&amp;vImg=https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg"
+                                                                        alt="하버드 교수의 생각 정리 수업" title="하버드 교수의 생각 정리 수업">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    하버드 교수의 생각 정리 수업</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320344&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg"
+                                                                        alt="리더의 질문법" title="리더의 질문법">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    리더의 질문법</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320343&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg"
+                                                                        alt="실리콘밸리의 팀장들" title="실리콘밸리의 팀장들">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    실리콘밸리의 팀장들</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320342&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg"
+                                                                        alt="책으로 치유하는 시간" title="책으로 치유하는 시간">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    책으로 치유하는 시간</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320356&amp;vImg=https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg"
+                                                                        alt="랩 스타일의 핸드메이드 레시피" title="랩 스타일의 핸드메이드 레시피">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    랩 스타일의 핸드메이드 레시피</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320358&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg"
+                                                                        alt="세상에 하나뿐인 앞치마" title="세상에 하나뿐인 앞치마">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    세상에 하나뿐인 앞치마</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320357&amp;vImg=https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg"
+                                                                        alt="오버록으로 간단하게 만드는 예쁜 옷"
+                                                                        title="오버록으로 간단하게 만드는 예쁜 옷">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    오버록으로 간단하게 만드는 예쁜 옷</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320341&amp;vImg=https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg"
+                                                                        alt="슬기로운 엄마표 영어 지침서" title="슬기로운 엄마표 영어 지침서">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    슬기로운 엄마표 영어 지침서</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320347&amp;vImg=https://shopping-phinf.pstatic.net/main_3936460/39364600632.20230425162255.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3936460/39364600632.20230425162255.jpg"
+                                                                        alt="내가 가진 것을 세상이 원하게 하라"
+                                                                        title="내가 가진 것을 세상이 원하게 하라">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    내가 가진 것을 세상이 원하게 하라</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320346&amp;vImg=https://shopping-phinf.pstatic.net/main_3249133/32491338036.20221019104554.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3249133/32491338036.20221019104554.jpg"
+                                                                        alt="오두막" title="오두막">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    오두막</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320345&amp;vImg=https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg"
+                                                                        alt="하버드 교수의 생각 정리 수업" title="하버드 교수의 생각 정리 수업">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    하버드 교수의 생각 정리 수업</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320344&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg"
+                                                                        alt="리더의 질문법" title="리더의 질문법">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    리더의 질문법</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320343&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg"
+                                                                        alt="실리콘밸리의 팀장들" title="실리콘밸리의 팀장들">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    실리콘밸리의 팀장들</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320342&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg"
+                                                                        alt="책으로 치유하는 시간" title="책으로 치유하는 시간">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    책으로 치유하는 시간</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320356&amp;vImg=https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg"
+                                                                        alt="랩 스타일의 핸드메이드 레시피" title="랩 스타일의 핸드메이드 레시피">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    랩 스타일의 핸드메이드 레시피</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320358&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg"
+                                                                        alt="세상에 하나뿐인 앞치마" title="세상에 하나뿐인 앞치마">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    세상에 하나뿐인 앞치마</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320357&amp;vImg=https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg"
+                                                                        alt="오버록으로 간단하게 만드는 예쁜 옷"
+                                                                        title="오버록으로 간단하게 만드는 예쁜 옷">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    오버록으로 간단하게 만드는 예쁜 옷</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 10px;">
+                                                            <a
+                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320341&amp;vImg=https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg&amp;menu_idx=12">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg"
+                                                                        alt="슬기로운 엄마표 영어 지침서" title="슬기로운 엄마표 영어 지침서">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    슬기로운 엄마표 영어 지침서</div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- controller 부분 자동 생성 -->
+                                                </div>
+                                                <div class="bx-controls bx-has-controls-direction">
+                                                    <div class="bx-controls-direction">
+                                                        <a class="bx-prev" href="">Prev</a>
+                                                        <a class="bx-next" href="">Next</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="end"></div>
                         </div>
                     </div>
                 </div>
 
-            </div>
+                <div class="main4-bottom-wrap">
+                    <div class="main4-bottom">
+                        <div class="mid-sections">
+                            <div class="main4-bottom-right">
+                                <div class="title">
+                                    <h2>
+                                        <div class="stxt">RECOMMEND BOOK</div>
+                                        <div class="ltxt">추천도서</div>
+                                    </h2>
+                                    <a href="/ul/board/index.do?menu_idx=21&amp;manage_idx=529" class="more"><img
+                                            src="/resources/common/img/book_type01/book-more-btn.png" alt="더보기"></a>
+                                </div>
+                            </div>
+                            <div class="main4-bottom-left">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div class="bookListBottom">
+                                            <div class="bx-wrapper" style="max-width: 820px; margin: 0px auto;">
+                                                <div class="bx-viewport"
+                                                    style="width: 100%; overflow: hidden; position: relative; height: 328px;">
+                                                    <ul
+                                                        style="width: 815%; position: relative; transition-duration: 0.5s; transform: translate3d(-1260px, 0px, 0px);">
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243226">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3801892/38018924625.20230313185352.jpg"
+                                                                        alt="손톱달의 비밀" title="손톱달의 비밀"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    손톱달의 비밀</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
+                                                                        alt="네가 사라진 날" title="네가 사라진 날"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    네가 사라진 날</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243223">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3764956/37649562618.20230214162318.jpg"
+                                                                        alt="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
+                                                                        title="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243222">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3804081/38040810631.20230313183950.jpg"
+                                                                        alt="어른의 말센스" title="어른의 말센스"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    어른의 말센스</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243228">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/214/806/21480609.jpg"
+                                                                        alt="악당이 된 녀석들" title="악당이 된 녀석들"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    악당이 된 녀석들</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243227">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3548319/35483195620.20221027181455.jpg"
+                                                                        alt="안녕 본본" title="안녕 본본"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    안녕 본본</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243226">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3801892/38018924625.20230313185352.jpg"
+                                                                        alt="손톱달의 비밀" title="손톱달의 비밀"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    손톱달의 비밀</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
+                                                                        alt="네가 사라진 날" title="네가 사라진 날"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    네가 사라진 날</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243223">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3764956/37649562618.20230214162318.jpg"
+                                                                        alt="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
+                                                                        title="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243222">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3804081/38040810631.20230313183950.jpg"
+                                                                        alt="어른의 말센스" title="어른의 말센스"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    어른의 말센스</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243228">
+                                                                <div class="">
+                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/214/806/21480609.jpg"
+                                                                        alt="악당이 된 녀석들" title="악당이 된 녀석들"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    악당이 된 녀석들</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243227">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3548319/35483195620.20221027181455.jpg"
+                                                                        alt="안녕 본본" title="안녕 본본"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    안녕 본본</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243226">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3801892/38018924625.20230313185352.jpg"
+                                                                        alt="손톱달의 비밀" title="손톱달의 비밀"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    손톱달의 비밀</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item bx-clone"
+                                                            style="float: left; list-style: none; position: relative; width: 190px; margin-right: 20px;">
+                                                            <a
+                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
+                                                                <div class="">
+                                                                    <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
+                                                                        alt="네가 사라진 날" title="네가 사라진 날"
+                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                                </div>
+                                                                <div class="btxt">
+                                                                    네가 사라진 날</div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="bx-controls bx-has-controls-direction">
+                                                    <div class="bx-controls-direction"><a class="bx-prev"
+                                                            href="">Prev</a><a class="bx-next" href="">Next</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-
-
-            <section id="fp-nav" class="fp-right fp-show-active" style="margin-top: -65.5px;">
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#main_1" class="active"></a>
-                            <span class="fp-sr-only">fistPage</span>
-                            <span></span>
-                        </li>
-                        <li>
-                            <a href="#main_2" class="active"></a>
-                            <span class="fp-sr-only">fistPage</span>
-                            <span></span>
-                        </li>
-                        <li>
-                            <a href="#main_3" class="active"></a>
-                            <span class="fp-sr-only">fistPage</span>
-                            <span></span>
-                        </li>
-                        <li>
-                            <a href="#main_4" class="active"></a>
-                            <span class="fp-sr-only">fistPage</span>
-                            <span></span>
-                        </li>
-                        <li>
-                            <a href="#" class="active"></a>
-                            <span class="fp-sr-only">fistPage</span>
-                            <span></span>
-                        </li>
-                    </ul>
+                            <div class="end"></div>
+                        </div>
+                    </div>
                 </div>
-
+            </div>
         </article>
-
     </section>
-<script type="text/javascript">
-        
-function fullPage() {
-	var myFullpage = new fullpage('#fullpage', {
-		anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
-		navigation:true,
-		showActiveTooltip: true,
-		menu: '#menu',
-		responsiveWidth: 1025,
-		afterLoad: function(origin, destination, direction){
-			var cur_page = destination.index+1;
-			if (destination.index == 0 ) {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			}  else if( destination.index == 1 ) {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			}	else if( destination.index == 2 ) {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			}  else if( destination.index == 3 ) {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			} else {
-				$('#header').removeClass("background-white");
-				$('.Gnb').css('border-top','1px solid #e6e6e6');
-				$('.Gnb').css('border-bottom','1px solid #e6e6e6');
-				$('.Gnb').css('background','#fff');
-				$('.tnb').css('background','#f2f2f2');
-			}
-		},
-		afterResponsive: function(isResponsive){}
-	});
-};
-
-fullPage();
-
-// 모바일일 경우 fullpage 미사용
-if ( $(window).width() < 1025 ) {
-	if ($('#fullpage').hasClass('fp-destroyed')){
-	} else {
-		fullpage_api.destroy('all');
-	}
-} else {
-	fullPage();
-};
-
-// 리사이즈 될때 모바일 화면에서 fullpage 미사용
-$( window ).resize( function(e) {
-	if ( $(window).width() < 1025 ) {
-		if ($('#fullpage').hasClass('fp-destroyed')){
-		} else {
-			fullpage_api.destroy('all');
-		}
-	} else {
-		fullPage();
-	};
-});
-
-</script>
-    
-        </article>
-        </section>
-        <section id="fp-nav" class="fp-right fp-show-active" style="margin-top: -65.5px;">
-
-
-        <div>
-            <ul>
-                <li>
-                    <a href="#firstPage" class=""></a>
-                    <span class="fp-sr-only">fistPage</span>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="#secondPage" class=""></a>
-                    <span class="fp-sr-only">secondPage</span>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="#3rdPage" class=""></a>
-                    <span class="fp-sr-only">3rdPage</span>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="#4thPage" class=""></a>
-                    <span class="fp-sr-only">4thtPage</span>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="#undefined" class=""></a>
-                    <span class="fp-sr-only">Section 5</span>
-                    <span></span>
-                </li>
-            </ul>
-
-        </div> 
-    </section> 
     <footer>
         <div class="bottom-banner-wrap"></div>
-        <div class="section fp-auto-height footer_area fp-section fr-table active fp-completely" data-fp-styles="null" style="height: 800px;"></div>
+        <div class="section"></div>
     </footer>
-    
 
 
+    <script type="text/javascript">
+        function fullPage() {
+            var myFullpage = new fullpage('#fullpage', {
+                // anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+                navigation: true,
+                // showActiveTooltip: true,
+                // menu: '#menu',
+                // responsiveWidth: 1025,
+                // afterLoad: function(origin, destination, direction){
+                //     var cur_page = destination.index+1;
+                //     if (destination.index == 0 ) {
+                //         $('#header').removeClass("background-white");
+                //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+                //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                //         $('.Gnb').css('background','#fff');
+                //         $('.tnb').css('background','#f2f2f2');
+                //     }  else if( destination.index == 1 ) {
+                //         $('#header').removeClass("background-white");
+                //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+                //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                //         $('.Gnb').css('background','#fff');
+                //         $('.tnb').css('background','#f2f2f2');
+                //     }	else if( destination.index == 2 ) {
+                //         $('#header').removeClass("background-white");
+                //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+                //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                //         $('.Gnb').css('background','#fff');
+                //         $('.tnb').css('background','#f2f2f2');
+                //     }  else if( destination.index == 3 ) {
+                //         $('#header').removeClass("background-white");
+                //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+                //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                //         $('.Gnb').css('background','#fff');
+                //         $('.tnb').css('background','#f2f2f2');
+                //     } else {
+                //         $('#header').removeClass("background-white");
+                //         $('.Gnb').css('border-top','1px solid #e6e6e6');
+                //         $('.Gnb').css('border-bottom','1px solid #e6e6e6');
+                //         $('.Gnb').css('background','#fff');
+                //         $('.tnb').css('background','#f2f2f2');
+                //     }
+                // },
+                // afterResponsive: function(isResponsive){}
+            });
+        };
 
-
+        fullPage();
+    </script>
 </body>
 
 </html>
