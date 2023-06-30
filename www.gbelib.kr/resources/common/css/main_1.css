@@ -88,6 +88,21 @@
 .main_1 #searchText{
     border-radius: 50px;
 }
+.main_1 #main-search-btn{
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    width: 90px;
+    background: url(/resources/common/img/main_type01/srch-icon.png)no-repeat center center;
+    height: 60px;
+    right:0;
+    top:0;
+    line-height: 60px;
+    color: #fff;
+    padding-left: 30px;
+    font-size: 0;
+    ;
+}
 .main_1 .main_1-box-bottom{
     overflow: hidden;
     vertical-align: baseline;
