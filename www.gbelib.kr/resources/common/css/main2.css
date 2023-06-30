@@ -90,6 +90,7 @@
 .main_2 .notice-box .title a {
     position: absolute;
     top: 130px;
+    bottom: 11px;
     right: 0px;
 }
 
