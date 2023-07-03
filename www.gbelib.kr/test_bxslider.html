@@ -10,7 +10,7 @@
     
     <link rel="stylesheet" href="/resources/common/css/reset.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> --> 
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
     <link rel="stylesheet" href="/resources/common/css/main_1.css">
@@ -27,81 +27,33 @@
             border: 3px black solid;
         } */
     </style>
-      <!-- main2: 공지사항, 팝업존 -->
-      <script>
+        <!-- main2: 공지사항, 팝업존 -->
+    <script>
         $(document).ready(function () {
             // 팝업존
             if ($('div.popupzonenew ul').length > 0) {
                 $('div.popupzonenew ul').bxSlider({
-                    mode: 'horizontal',
+                    mode: 'fade',
                     auto: true,
-                    autoHover: true,
-                    speed: 10,
-                    pager: true,    //페이지 바로가기 버튼을 보여줌
-                    pagerType: 'short',
-                    auto: true,
-                    adaptiveHeight:true, //이미지 높이에 맞춰 자동 조절
-                    //controller 부분 자동 생성
-                    autoControls: true,     //시작 중지 버튼을 보여줌
+                    // autoHover: true,
+                    speed: 500,
+                    pager: false,
+                    // pagerType: 'short',
+                    // auto: true,
+                    autoControls: true,
                     autoControlsCombine: true
                 });
             }
         });
-
     </script>
 </head>
 
 <body >
-    <header>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quos eius tempore, velit quae fugit minima officia recusandae tempora ex magnam repudiandae nesciunt iste autem possimus! Consequatur sint ab vitae.</p>
-    </header>
-    <section id="fullpage">
-        <article class=" section ">
-aaaaa
+
         </article>
         <article class="main_2 section" id="main_2">
             <!-- 임지연 -->
             <div id="main1">
-                <!--공지사항에 관한 것-->
-                <div class="main1-inner-left">
-                    <div class="notice-box">
-                        <div class="title">
-                            <h3>공지사항</h3>
-                            <a href="http://www.gbelib.kr/ul/board/index.do?menu_idx=58&manage_idx=528"
-                                title="공지사항 더보기 버튼"><img src="/resources/common/img/notice_type04/more-btn.png"
-                                    alt="공지사항 더보기 이미지" title="공지사항 더보기 이미지"></a>
-                        </div>
-                        <div class="list">
-                            <ul>
-                                <ul>
-                                    <li><a href="#" title="게시글 자세히 보기">울릉도서관 6월 휴관일 안내</a><span>2023-06-02</span>
-                                    </li>
-                                    <li><a href="#" title="게시글 자세히 보기"> 2023년 상반기 평생교육 강좌 만족도 설문조사
-                                            안내</a><span>2023-05-31</span>
-                                    </li>
-                                    <li><a href="#" title="게시글 자세히 보기"> 울릉도서관 5월 휴관일 안내</a><span>2023-04-30</span>
-                                    </li>
-                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=242277"
-                                            title="게시글 자세히 보기"> 🎉 제 59회 도서관주간 및 세계 책의 날 행사
-                                            안내</a><span>2023-04-04</span>
-                                    </li>
-                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=241203"
-                                            title="게시글 자세히 보기"> 어린이 독서회 [Book쟁이] 회원 모집</a><span>2023-03-14</span>
-
-                                    </li>
-                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240652"
-                                            title="게시글 자세히 보기"> 디지털 자료실 이용 제한 안내</a><span>2023-02-28</span></li>
-                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240433"
-                                            title="게시글 자세히 보기"> 울릉도서관 삼일절(3. 1.) 휴관 안내</a><span>2023-02-23</span>
-                                    </li>
-                                    <li><a href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&manage_idx=528&board_idx=240421"
-                                            title="게시글 자세히 보기"> 울릉도서관 화장실 보수 공사 안내</a><span>2023-02-22</span></li>
-                                </ul>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
                 <!-- 팝업존에 관한 것 -->
                 <div class="main1-inner-right">
                     <div class="popupzone-box">
@@ -109,45 +61,36 @@ aaaaa
                             <h3>팝업존</h3>
                         </div>
                         <div class="popupzonenew">
-                            <div class="bx-wrapper" style="max-width: 100%;">
-                                <div class="bx-viewport"
-                                    style="width: 100%; overflow: hidden; position: relative; height: 379px;">
-                                    <ul style="width: auto; position: relative;">
+                            <div class="bx-wrapper">
+                                <div class="bx-viewport">
+                                    <ul>
                                         <li>
                                             <a
-                                                href="http://www.gbelib.kr/ul/board/view.do?menu_idx=58&amp;manage_idx=528&amp;board_idx=244560">
+                                                href="#">
                                                 <img alt="5월 휴관" src="/data/popupZone/h26/1685665582984.jpg"></a>
                                         </li>
                                         <li>
-                                            <a href=" ">
+                                            <a href="#">
                                                 <img alt="두배로" src="/data/popupZone/h26/1683605178662.jpg"></a>
                                         </li>
                                         <li>
-                                            <a
-                                                href="https://www.gbelib.kr/ul/board/index.do?menu_idx=21&amp;manage_idx=529">
+                                            <a href="#">
                                                 <img alt="5,6 추천도서" src="/data/popupZone/h26/1683081896240.jpg"></a>
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- controller 부분 자동 생성 -->
                             
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-bbbbb
+
         </article>
-        <article class=" section ">
-ccccc
-        </article>
-        <article class=" section ">
-ddddd
-        </article>
+
+
     </section>
-    <header>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quos eius tempore, velit quae fugit minima officia recusandae tempora ex magnam repudiandae nesciunt iste autem possimus! Consequatur sint ab vitae.</p>
-    </header>
+
 <script type="text/javascript">
     function fullPage() {
         var myFullpage = new fullpage('#fullpage', {
