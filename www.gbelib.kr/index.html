@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/resources/common/css/reset.css">
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> <!--외부 라이브러리인 bxSlider의 JavaScript 파일(bx 라이브러리 파일을 가져옴) 이미지 슬라이더를 구현하기 위해서-->
 
     <link rel="stylesheet" href="/resources/common/css/main_1.css">
     <link rel="stylesheet" href="/resources/common/css/main2.css">
@@ -20,21 +20,23 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
+    
     <!-- main2: 공지사항, 팝업존 -->
     <script>
-        $(document).ready(function () {
+        //jQuery를 사용하여 페이지 로딩이 완료된 후 실행되는 함수를 정의(팝업존에 대한 설정을 처리)
+        $(document).ready(function () {             //문서 객체 모델(DOM)이 완전히 로드된 후에 실행되는 함수를 정의한다.(즉, HTML 문서가 완전히 로드된 후에 아래의 코드 블록이 실행된다.)
             // 팝업존
             if ($('div.popupzonenew ul').length > 0) {
                 $('div.popupzonenew ul').bxSlider({
-                    mode: 'fade',
-                    auto: true,
+                    mode: 'fade',                   //이미지들이 서서히 사라지고 나타나는 효과를 사용함
+                    auto: true,                     //슬라이더가 자동으로 이미지를 전환함
+                    speed: 500,                     //자동 전환 기능을 제어하는 컨트롤러 표시함
+                    pager: false,                   //슬라이더에 페이저(페이지 선택 기능)를 표시하지 않도록 설정함
+                    autoControls: true,
+                    autoControlsCombine: true       //이전 및 다음 버튼을 하나의 버튼으로 결합하여 표시함
                     // autoHover: true,
-                    speed: 500,
-                    pager: false,
                     // pagerType: 'short',
                     // auto: true,
-                    autoControls: true,
-                    autoControlsCombine: true
                 });
             }
         });
