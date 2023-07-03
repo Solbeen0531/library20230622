@@ -49,38 +49,66 @@
 
     <!-- main4: 책 소개 -->
     <style>
-        #main_4 .title .stxt {
-            padding: 0 0 0 5px;
-        }
+        /* 왼쪽 위 신간도서 */
         #main_4 .main4-top-left {
             background: url('/resources/common/img/book_type01/book01-bg.jpg');
-            background-size: 100% 80%;
-            color: white;
+            background-size: cover;
+
             width: 326px;
             height: 403.5px;
+            position: relative;
         }
+        #main_4 .title {
+            margin-top: 80px;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        #main_4 .title .stxt {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+
+            padding-left: 5px;
+            letter-spacing: 3px;
+            
+        }
+
+        #main_4 .title .ltxt {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 36px;
+            color: #fff;
+
+
+        }
+        /* 오른쪽 위 신간도서 슬라이드 */
         #main_4 .main4-top-right {
             width: 978px;
             height: 403.5px;
             float: right;
         }
-        #main_4 .main4-top-right > .bx-wrapper{
+
+        #main_4 .main4-top-right>.bx-wrapper {
             max-width: 590px;
             margin: 0px auto;
         }
-        #main_4 .bx-viewport{
+
+        #main_4 .bx-viewport {
             width: 100%;
             overflow: hidden;
             position: relative;
             height: 328px;
         }
-        #main_4 .main4-top-right > ul {
+
+        #main_4 .main4-top-right>ul {
             width: 1215%;
             position: relative;
             transition-duration: 0.5s;
             transform: translate3d(-1000px, 0px, 0px);
         }
-        #main_4 > .main4-top-right > .item bx-clone{
+
+        #main_4>.main4-top-right>.item bx-clone {
             list-style: none;
             position: relative;
             width: 190px;
@@ -91,24 +119,27 @@
             clear: both;
         }
 
-        
-        #main_4 .main4-bottom-left > .bx-wrapper{
+
+        #main_4 .main4-bottom-left>.bx-wrapper {
             float: left;
             max-width: 820px;
             margin: 0px auto;
         }
-        #main_4 .main4-bottom-left > ul {
+
+        #main_4 .main4-bottom-left>ul {
             width: 815%;
             position: relative;
             transition-duration: 0.5s;
             transform: translate3d(-1260px, 0px, 0px);
         }
-        #main_4 .main4-bottom-left > .item bx-clone{
+
+        #main_4 .main4-bottom-left>.item bx-clone {
             list-style: none;
             position: relative;
             width: 190px;
             margin-right: 20px;
         }
+
         #main_4 .main4-bottom-right {
             background: url('/resources/common/img/book_type01/book01-bg.jpg');
             color: white;
@@ -117,7 +148,6 @@
             height: 403.5px;
             float: right;
         }
-
     </style>
 
 </head>
@@ -241,10 +271,10 @@
                         <div class="title">
                             <h3>공지사항</h3>
                             <a href="/ul/board/index.do?menu_idx=58&manage_idx=528" title="공지사항 더보기 버튼">
-                                <img src="/resources/common/img/notice_type04/more-btn.png"
-                                    alt="공지사항 더보기 이미지" title="공지사항 더보기 이미지">
-                                </a>
-                          </div>
+                                <img src="/resources/common/img/notice_type04/more-btn.png" alt="공지사항 더보기 이미지"
+                                    title="공지사항 더보기 이미지">
+                            </a>
+                        </div>
                         <div class="list">
                             <ul>
                                 <ul>
@@ -698,166 +728,166 @@
         <!-- 박솔빈 -->
 
         <article class="main_4 section" id="main_4">
-                <script>
-                    $(function () {
-                        var _width = $(window).width();
-                        var _bookListTop;
-                        var _bookListBottom;
+            <script>
+                $(function () {
+                    var _width = $(window).width();
+                    var _bookListTop;
+                    var _bookListBottom;
 
-                        var Books = function () {
-                            try {
-                                if (_bookListTop) _bookListTop.destroySlider();
-                                if (_bookListBottom) _bookListBottom.destroySlider();
-                            } catch (e) {
-                                // TODO: handle exception
-                            }
+                    var Books = function () {
+                        try {
+                            if (_bookListTop) _bookListTop.destroySlider();
+                            if (_bookListBottom) _bookListBottom.destroySlider();
+                        } catch (e) {
+                            // TODO: handle exception
+                        }
 
-                            if (_width <= 380) {
-                                _bookListTop = $('.bookListTop ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 1,
-                                    slideWidth: 190,
-                                    slideMargin: 0
-                                });
+                        if (_width <= 380) {
+                            _bookListTop = $('.bookListTop ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 1,
+                                slideWidth: 190,
+                                slideMargin: 0
+                            });
 
-                                _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 1,
-                                    slideWidth: 190,
-                                    slideMargin: 0
-                                });
-                            }
-                            else if (_width <= 550 && _width > 380) {
-                                _bookListTop = $('.bookListTop ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 2,
-                                    slideWidth: 190,
-                                    slideMargin: 0
-                                });
+                            _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 1,
+                                slideWidth: 190,
+                                slideMargin: 0
+                            });
+                        }
+                        else if (_width <= 550 && _width > 380) {
+                            _bookListTop = $('.bookListTop ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 2,
+                                slideWidth: 190,
+                                slideMargin: 0
+                            });
 
-                                _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 2,
-                                    slideWidth: 190,
-                                    slideMargin: 0
-                                });
-                            }
-                            else if (_width <= 768 && _width > 550) {
-                                _bookListTop = $('.bookListTop ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 3,
-                                    slideWidth: 190,
-                                    slideMargin: 10
-                                });
+                            _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 2,
+                                slideWidth: 190,
+                                slideMargin: 0
+                            });
+                        }
+                        else if (_width <= 768 && _width > 550) {
+                            _bookListTop = $('.bookListTop ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 3,
+                                slideWidth: 190,
+                                slideMargin: 10
+                            });
 
-                                _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 3,
-                                    slideWidth: 190,
-                                    slideMargin: 10
-                                });
-                            }
-                            else if (_width <= 1024 && _width > 768) {
-                                _bookListTop = $('.bookListTop ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 4,
-                                    slideWidth: 190,
-                                    slideMargin: 20
-                                });
+                            _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 3,
+                                slideWidth: 190,
+                                slideMargin: 10
+                            });
+                        }
+                        else if (_width <= 1024 && _width > 768) {
+                            _bookListTop = $('.bookListTop ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 4,
+                                slideWidth: 190,
+                                slideMargin: 20
+                            });
 
-                                _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 4,
-                                    slideWidth: 190,
-                                    slideMargin: 20
-                                });
-                            }
-                            else if (_width <= 1600 && _width > 1024) {
-                                _bookListTop = $('.bookListTop ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 4,
-                                    slideWidth: 190,
-                                    slideMargin: 10
-                                });
+                            _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 4,
+                                slideWidth: 190,
+                                slideMargin: 20
+                            });
+                        }
+                        else if (_width <= 1600 && _width > 1024) {
+                            _bookListTop = $('.bookListTop ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 4,
+                                slideWidth: 190,
+                                slideMargin: 10
+                            });
 
-                                _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 4,
-                                    slideWidth: 190,
-                                    slideMargin: 20
-                                });
-                            }
-                            else {
-                                _bookListTop = $('.bookListTop ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 5,
-                                    slideWidth: 190,
-                                    slideMargin: 30
-                                });
+                            _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 4,
+                                slideWidth: 190,
+                                slideMargin: 20
+                            });
+                        }
+                        else {
+                            _bookListTop = $('.bookListTop ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 5,
+                                slideWidth: 190,
+                                slideMargin: 30
+                            });
 
-                                _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                    auto: true,
-                                    autoHover: true,
-                                    speed: 500,
-                                    pager: false,
-                                    moveSlides: 1,
-                                    maxSlides: 5,
-                                    slideWidth: 190,
-                                    slideMargin: 30
-                                });
-                            }
-                        };
+                            _bookListBottom = $('.bookListBottom ul').bxSlider({
+                                auto: true,
+                                autoHover: true,
+                                speed: 500,
+                                pager: false,
+                                moveSlides: 1,
+                                maxSlides: 5,
+                                slideWidth: 190,
+                                slideMargin: 30
+                            });
+                        }
+                    };
+                    Books();
+                    $(window).on('resize', function () {
+                        _width = $(window).width();
                         Books();
-                        $(window).on('resize', function () {
-                            _width = $(window).width();
-                            Books();
-                        });
                     });
-                </script>
+                });
+            </script>
             <div>
                 <div class="main4-top-wrap">
                     <div class="main4-top">
@@ -1134,7 +1164,7 @@
                                                             </a>
                                                         </li>
                                                         <li class="item bx-clone">
-                                                             <a
+                                                            <a
                                                                 href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
                                                                 <div class="">
                                                                     <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
@@ -1171,7 +1201,7 @@
                                                             </a>
                                                         </li>
                                                         <li class="item bx-clone">
-                                                             <a
+                                                            <a
                                                                 href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243228">
                                                                 <div class="">
                                                                     <img src="https://bookthumb-phinf.pstatic.net/cover/214/806/21480609.jpg"
