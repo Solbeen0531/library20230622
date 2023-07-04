@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="/resources/common/css/culture_type02.css">
     <link rel="stylesheet" href="/resources/common/css/header.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
-
+    <link rel="stylesheet" href="/resources/common/css/jquery.fullpage.css">
     <!-- main2: 공지사항, 팝업존 -->
     <script>
         //jQuery를 사용하여 페이지 로딩이 완료된 후 실행되는 함수를 정의(팝업존에 대한 설정을 처리)
@@ -3463,7 +3463,7 @@
     <script type="text/javascript">
         function fullPage() {
             var myFullpage = new fullpage('#fullpage', {
-                // anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
                 navigation: true,
                 // showActiveTooltip: true,
                 // menu: '#menu',
