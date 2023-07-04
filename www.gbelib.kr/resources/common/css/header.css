@@ -1,0 +1,96 @@
+body{
+    position: relative;
+    z-index: 7;
+}
+.header{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    z-index: 7;
+    font-weight: 500;
+}
+.header a{
+    text-decoration-line: none;
+}
+.header .tnb{
+    overflow: hidden;
+    line-height: 150%;
+}
+.header .util-left{
+    float: left;
+    display: block;
+}
+.header .util-left ul li{
+    display: inline-block;
+}
+.header .util-left a{
+    font-size: 15px;
+    color: #454545;
+    font-weight: bold;
+    display: inline-block;
+    zoom: 1;
+    padding: 0 30px;
+    text-decoration-line: none;
+}
+.header .util-right{
+    float: right;
+    display: block;
+}
+.header .util-right ul li{
+    display: inline-block;
+    line-height: 150%;
+}
+.header .util-right a{
+    font-size: 15px;
+    color: #454545;
+    font-weight: bold;
+    display: inline-block;
+    zoom: 1;
+    padding: 0 30px;
+    text-decoration-line: none;
+}
+.header .Gnb{
+    background: rgb(255, 255, 255);
+    clear: both;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    overflow: inherit;
+    position: relative;
+}
+.header .wide-section{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
+.header h1{
+    position: absolute;
+}
+.header .g-menu{
+    display: block;
+    
+}
+.header .Gnb .gnb-menu{
+    position: relative;
+    text-align: right;
+    margin-right: 30px;
+    vertical-align: baseline;
+    padding-top: 10px;
+    width: 100%;
+}
+.header .gnb-menu ul{
+    display: block;
+}
+.header .Gnb .gnb-menu>li{
+    display: inline-block;
+    zoom: 1;
+    position: static;
+    padding: 0 30px;
+}
+.header .Gnb .gnb-menu>li>a{
+    line-height: 45px;
+    color: #454545;
+    font-size: 19px;
+    font-weight: bold;
+}

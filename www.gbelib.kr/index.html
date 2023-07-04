@@ -11,16 +11,18 @@
     <link rel="stylesheet" href="/resources/common/css/reset.css">
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> <!--외부 라이브러리인 bxSlider의 JavaScript 파일(bx 라이브러리 파일을 가져옴) 이미지 슬라이더를 구현하기 위해서-->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!--외부 라이브러리인 bxSlider의 JavaScript 파일(bx 라이브러리 파일을 가져옴) 이미지 슬라이더를 구현하기 위해서-->
 
     <link rel="stylesheet" href="/resources/common/css/main_1.css">
     <link rel="stylesheet" href="/resources/common/css/main2.css">
     <link rel="stylesheet" href="/resources/common/css/main3.css">
     <link rel="stylesheet" href="/resources/common/css/culture_type02.css">
+    <link rel="stylesheet" href="/resources/common/css/header.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
-    
+    <link rel="stylesheet" href="/resources/common/css/jquery.fullpage.css">
     <!-- main2: 공지사항, 팝업존 -->
     <script>
         //jQuery를 사용하여 페이지 로딩이 완료된 후 실행되는 함수를 정의(팝업존에 대한 설정을 처리)
@@ -58,6 +60,7 @@
             height: 403.5px;
             position: relative;
         }
+
         #main_4 .title {
             margin-top: 80px;
             position: relative;
@@ -71,7 +74,7 @@
 
             padding-left: 5px;
             letter-spacing: 3px;
-            
+
         }
 
         #main_4 .title .ltxt {
@@ -82,11 +85,13 @@
 
 
         }
+
         /* 오른쪽 위 신간도서 슬라이드 */
         #main_4 .main4-top-right {
             width: 978px;
             height: 403.5px;
             float: right;
+            margin-top: 0px;
         }
 
         #main_4 .main4-top-right>.bx-wrapper {
@@ -148,33 +153,160 @@
             height: 403.5px;
             float: right;
         }
-/* #main_4 .bookListTop {overflow:hidden;} */
-/* #main_4 .bookListTop .item {position:relative;padding:0;} */
-/* #main_4 .bookListTop .item a {width:195px;height:285px;font-size:16px;color:#333;font-weight:500;} */
-/* #main_4 .bookListTop .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;} */
 
-#main_4 .bookListTop .bx-controls {position:absolute;width:380px;height:50px;bottom:75px;left:0;z-index:150000000;}
-#main_4 .bookListTop .bx-prev  {position:absolute;width:110px;height:29px;font-size:0;background-image:url("/resources/common/img/book_type01/book-prev-btn.png");background-repeat: no-repeat; background-position:0 0;background-size:initial;left:0;}
-#main_4 .bookListTop .bx-next  {position:absolute;width:110px;height:29px;font-size:0;background-image:url("/resources/common/img/book_type01/book-next-btn.png");background-repeat: no-repeat; background-position:0 0;background-size:initial;right:0;}
+        /* #main_4 .bookListTop {overflow:hidden;} */
+        /* #main_4 .bookListTop .item {position:relative;padding:0;} */
+        /* #main_4 .bookListTop .item a {width:195px;height:285px;font-size:16px;color:#333;font-weight:500;} */
+        /* #main_4 .bookListTop .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;} */
 
-/* #main_4 .bookListBottom {overflow:hidden;} */
-/* #main_4 .bookListBottom .item {position:relative;padding:0;} */
-/* #main_4 .bookListBottom .item a {width:195px;height:285px;} */
-/* #main_4 .bookListBottom .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;} */
+        #main_4 .bookListTop .bx-controls {
+            position: absolute;
+            width: 380px;
+            height: 50px;
+            bottom: 75px;
+            left: 0;
+            z-index: 150000000;
+        }
 
-#main_4 .bookListBottom .bx-controls {position:absolute;width:380px;height:50px;bottom:75px;right:0;z-index:150000000;}
-#main_4 .bookListBottom .bx-prev  {position:absolute;width:110px;height:29px;font-size:0;background-image:url("/resources/common/img/book_type01/book-prev-btn.png");background-repeat: no-repeat; background-position:0 0;background-size:initial;left:0;}
-#main_4 .bookListBottom .bx-next  {position:absolute;width:110px;height:29px;font-size:0;background-image:url("/resources/common/img/book_type01/book-next-btn.png");background-repeat: no-repeat; background-position:0 0;background-size:initial;right:0;}
+        #main_4 .bookListTop .bx-prev {
+            position: absolute;
+            width: 110px;
+            height: 29px;
+            font-size: 0;
+            background-image: url("/resources/common/img/book_type01/book-prev-btn.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: initial;
+            left: 0;
+        }
 
+        #main_4 .bookListTop .bx-next {
+            position: absolute;
+            width: 110px;
+            height: 29px;
+            font-size: 0;
+            background-image: url("/resources/common/img/book_type01/book-next-btn.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: initial;
+            right: 0;
+        }
+
+        /* #main_4 .bookListBottom {overflow:hidden;} */
+        /* #main_4 .bookListBottom .item {position:relative;padding:0;} */
+        /* #main_4 .bookListBottom .item a {width:195px;height:285px;} */
+        /* #main_4 .bookListBottom .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;} */
+
+        #main_4 .bookListBottom .bx-controls {
+            position: absolute;
+            width: 380px;
+            height: 50px;
+            bottom: 75px;
+            right: 0;
+            z-index: 150000000;
+        }
+
+        #main_4 .bookListBottom .bx-prev {
+            position: absolute;
+            width: 110px;
+            height: 29px;
+            font-size: 0;
+            background-image: url("/resources/common/img/book_type01/book-prev-btn.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: initial;
+            left: 0;
+        }
+
+        #main_4 .bookListBottom .bx-next {
+            position: absolute;
+            width: 110px;
+            height: 29px;
+            font-size: 0;
+            background-image: url("/resources/common/img/book_type01/book-next-btn.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: initial;
+            right: 0;
+        }
     </style>
 
 </head>
 
-<body class="fp-viewing-secondPage" style="overflow: hidden; height: 100%;">
+<body class="" style="overflow: hidden; height: 100%;">
     <header class="header">
         <div class="slider">
-            <div>I am a slide.</div>
-            <div>I am another slide.</div>
+            <div class="tnb" style="background: rgb(242, 242, 242);">
+                <div class="util-left">
+                    <ul>
+                        <li>
+                            <a href="#">통합공공도서관</a>
+                        </li>
+                        <li>
+                            <a href="#">전자도서관</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="util-right">
+                    <ul>
+                        <li>
+                            <a href="#">로그인</a>
+                        </li>
+                        <li>
+                            <a href="#">회원가입</a>
+                        </li>
+                        <li>
+                            <a href="#">나의도서관</a>
+                        </li>
+                        <li>
+                            <a href="#">통합팝업열기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Gnb" style="border-top: 1px solid rgb(230, 230, 230); border-bottom: 1px solid rgb(230, 230, 230);">
+                <div class="wide-section">
+                    <h1>
+                        <a href="#">
+                            <img src="/resources/homepage/ul/img/logo.png" alt="경상북도교육청 울릉도서관">
+                        </a>
+                    </h1>
+                </div>
+                <div class="g-menu">
+                    <ul class="gnb-menu">
+                        <li>
+                            <a href="#">
+                                <span>자료검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>독서문화행사</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>평생교육</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>참여공간</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>도서관서비프</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>도서관소개</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <section id="fullpage">
@@ -217,60 +349,68 @@
                             <div class="quickmenu">
                                 <ul>
                                     <li>
-                                        <a href="#" title="대출조회·예약"></a>
-                                        <div class="image">
-                                            <img src="/resources/homepage/ul/img/q1.png" alt="대출조회·예약">
-                                            <div class="qtxt">대출조회·예약</div>
-                                        </div>
+                                        <a href="#" title="대출조회·예약">
+                                            <div class="image">
+                                                <img src="/resources/homepage/ul/img/q1.png" alt="대출조회·예약">
+                                                <div class="qtxt">대출조회·예약</div>
+                                            </div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#"></a>
-                                        <div class="image">
-                                            <img src="/resources/homepage/ul/img/q2.png" alt="희망도서신청">
-                                        </div>
-                                        <div class="qtxt">희망도서신청</div>
+                                        <a href="#">
+                                            <div class="image">
+                                                <img src="/resources/homepage/ul/img/q2.png" alt="희망도서신청">
+                                            </div>
+                                            <div class="qtxt">희망도서신청</div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#"></a>
-                                        <div class="image">
-                                            <img src="/resources/homepage/ul/img/q3.png" alt="문화행사신청">
-                                        </div>
-                                        <div class="qtxt">문화행사신청</div>
+                                        <a href="#">
+                                            <div class="image">
+                                                <img src="/resources/homepage/ul/img/q3.png" alt="문화행사신청">
+                                            </div>
+                                            <div class="qtxt">문화행사신청</div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#"></a>
-                                        <div class="image">
-                                            <img src="/resources/homepage/ul/img/q4.png" alt="전자도서관">
-                                        </div>
-                                        <div class="qtxt">전자도서관</div>
+                                        <a href="#">
+                                            <div class="image">
+                                                <img src="/resources/homepage/ul/img/q4.png" alt="전자도서관">
+                                            </div>
+                                            <div class="qtxt">전자도서관</div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#"></a>
-                                        <div class="image">
-                                            <img src="/resources/homepage/ul/img/q5.png" alt="이용안내">
-                                        </div>
-                                        <div class="qtxt">이용안내</div>
+                                        <a href="#">
+                                            <div class="image">
+                                                <img src="/resources/homepage/ul/img/q5.png" alt="이용안내">
+                                            </div>
+                                            <div class="qtxt">이용안내</div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#"></a>
-                                        <div class="image">
-                                            <img src="/resources/homepage/ul/img/q6.png" alt="자주하는질문">
-                                        </div>
-                                        <div class="qtxt">자주하는질문</div>
+                                        <a href="#">
+                                            <div class="image">
+                                                <img src="/resources/homepage/ul/img/q6.png" alt="자주하는질문">
+                                            </div>
+                                            <div class="qtxt">자주하는질문</div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#"></a>
-                                        <div class="image">
-                                            <img src="/resources/homepage/ul/img/q7.png" alt="스마트도서관">
-                                        </div>
-                                        <div class="qtxt">스마트도서관</div>
+                                        <a href="#">
+                                            <div class="image">
+                                                <img src="/resources/homepage/ul/img/q7.png" alt="스마트도서관">
+                                            </div>
+                                            <div class="qtxt">스마트도서관</div>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#"></a>
-                                        <div class="image">
-                                            <img src="/resources/homepage/ul/img/q8.png" alt="책바다서비스">
-                                        </div>
-                                        <div class="qtxt">책바다서비스</div>
+                                        <a href="#">
+                                            <div class="image">
+                                                <img src="/resources/homepage/ul/img/q8.png" alt="책바다서비스">
+                                            </div>
+                                            <div class="qtxt">책바다서비스</div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -335,8 +475,7 @@
                                 <div class="bx-viewport">
                                     <ul>
                                         <li>
-                                            <a
-                                                href="#">
+                                            <a href="#">
                                                 <img alt="5월 휴관" src="/data/popupZone/h26/1685665582984.jpg"></a>
                                         </li>
                                         <li>
@@ -344,8 +483,7 @@
                                                 <img alt="두배로" src="/data/popupZone/h26/1683605178662.jpg"></a>
                                         </li>
                                         <li>
-                                            <a
-                                                href="#">
+                                            <a href="#">
                                                 <img alt="5,6 추천도서" src="/data/popupZone/h26/1683081896240.jpg"></a>
                                         </li>
                                     </ul>
@@ -426,6 +564,31 @@
                                     $('#before-btn').on(
                                         'click',
                                         function (e) {
+                                            console.log($(this).attr('keyValue'));
+                                            var thiskeyValue = $(this).attr('keyValue');
+                                            var thiskeyValueArr = thiskeyValue.split('-');
+                                            if (thiskeyValueArr[1] > 1) {
+                                                thiskeyValueArr[1] = thiskeyValueArr[1] * 1 - 1;
+                                                if (thiskeyValueArr[1] < 10) {
+                                                    thiskeyValueArr[1] = "0" + thiskeyValueArr[1];
+                                                }
+                                            } else {
+                                                thiskeyValueArr[1] = "12";
+                                                thiskeyValueArr[0] = thiskeyValueArr[0] * 1 - 1;
+                                            }
+                                            $(this).attr('keyValue', thiskeyValueArr[0] + "-" + thiskeyValueArr[1]);
+                                            $(this).nextAll('a').attr('keyValue', thiskeyValueArr[0] + "-" + thiskeyValueArr[1]);
+                                            $(this).nextAll('p').text(thiskeyValueArr[0]);
+                                            $(this).nextAll('b').text(thiskeyValueArr[1]);
+
+                                            // 
+                                            var nowkeyValue = $(".cal-func2 > #before-btn").attr("keyvalue");
+                                            $(".cal-tbl").hide();// 2 elements all hide
+                                            $(".cal-tbl").each(function () {
+                                                if ($(this).attr("keyvalue") == nowkeyValue) {
+                                                    $(this).show();
+                                                }
+                                            });
                                             var plan_date = new Date($(this).attr('keyValue'));
                                             plan_date.setMonth(plan_date.getMonth() - 1);
                                             //plan_date.format('yyyy-MM')
@@ -436,6 +599,33 @@
                                     $('#next-btn').on(
                                         'click',
                                         function (e) {
+                                            console.log($(this).attr('keyValue'));
+                                            var thiskeyValue = $(this).attr('keyValue');
+                                            var thiskeyValueArr = thiskeyValue.split('-');
+                                            if (thiskeyValueArr[1] < 12) {
+                                                thiskeyValueArr[1] = thiskeyValueArr[1] * 1 + 1;
+                                                if (thiskeyValueArr[1] < 10) {
+                                                    thiskeyValueArr[1] = "0" + thiskeyValueArr[1];
+                                                }
+                                            } else {
+                                                thiskeyValueArr[1] = "01";
+                                                thiskeyValueArr[0] = thiskeyValueArr[0] * 1 + 1;
+                                            }
+                                            $(this).attr('keyValue', thiskeyValueArr[0] + "-" + thiskeyValueArr[1]);
+                                            $(this).prevAll('a').attr('keyValue', thiskeyValueArr[0] + "-" + thiskeyValueArr[1]);
+                                            $(this).prevAll('p').text(thiskeyValueArr[0]);
+                                            $(this).prevAll('b').text(thiskeyValueArr[1]);
+
+                                            // 
+                                            var nowkeyValue = $(".cal-func2 > #before-btn").attr("keyvalue");
+                                            $(".cal-tbl").hide();// 2 elements all hide
+                                            $(".cal-tbl").each(function () {
+                                                if ($(this).attr("keyvalue") == nowkeyValue) {
+                                                    $(this).show();
+                                                }
+                                            });
+
+
                                             var plan_date = new Date($(this).attr('keyValue'));
                                             plan_date.setMonth(plan_date.getMonth() + 1);
                                             $('div#calendar-box').load('calendar3.do',
@@ -455,6 +645,13 @@
                                         $(".calAll").hide();
                                     });
 
+                                    var nowkeyValue = $(".cal-func2 > #before-btn").attr("keyvalue");
+                                    $(".cal-tbl").hide();// 2 elements all hide
+                                    $(".cal-tbl").each(function () {
+                                        if ($(this).attr("keyvalue") == nowkeyValue) {
+                                            $(this).show();
+                                        }
+                                    });
                                 });
                             </script>
                             <div id="calendar2">
@@ -476,7 +673,935 @@
                                             <span class="ev">행사</span>
                                         </div>
 
-                                        <table class="cal-tbl">
+                                        <table class="cal-tbl" keyvalue="2023-01">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                3</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                4</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="6">6</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                10</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                11</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                12</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="13">13</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                14</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                15</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                16</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                17</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                18</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                19</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="20">20</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                21</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                22</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                23</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                24</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                25</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                26</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="27">27</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                28</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-02">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                3</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                4</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="6">6</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                10</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                11</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                12</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="13">13</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                14</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                15</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                16</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                17</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                18</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                19</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="20">20</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                21</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                22</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                23</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                24</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                25</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                26</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="27">27</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                28</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-03">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="1">1</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="2">2</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                3</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="4">4</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="6">6</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="7">7</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="8">8</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="9">9</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                10</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="11">11</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                12</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="13">13</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="14">14</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="15">15</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="16">16</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                17</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="18">18</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                19</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="20">20</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="21">21</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="22">22</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="23">23</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                24</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="25">25</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                26</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="27">27</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="28">28</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="29">29</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="30">30</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                31</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-04">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="1">1</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="3">3</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="4">4</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="5">5</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="6">6</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                7</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="8">8</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="10">10</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="11">11</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="12">12</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="13">13</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                14</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="15">15</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                16</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="17">17</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="18">18</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="19">19</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="20">20</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                21</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="22">22</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                23</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="24">24</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="25">25</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="26">26</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="27">27</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                28</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="29">29</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                30</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-05">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="1">1</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="2">2</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="3">3</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="4">4</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="5">5</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="6">6</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="8">8</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="9">9</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="10">10</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="11">11</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                12</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="13">13</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                14</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="15">15</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="16">16</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="17">17</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="18">18</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                19</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="20">20</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                21</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="22">22</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="23">23</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="24">24</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                25</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                26</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="27">27</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                28</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="29">29</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                30</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="31">31</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-06">
                                             <thead>
                                                 <tr>
                                                     <th class="sun">일</th>
@@ -650,6 +1775,1100 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <table class="cal-tbl" keyvalue="2023-07">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="1">1</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            2</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="3">3</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            4</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            5</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            6</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            7</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="8">8</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            9</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="10">10</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            11</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            12</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            13</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            14</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="15">15</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            16</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="17">17</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            18</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            19</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            20</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            21</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="22">22</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            23</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="24">24</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            25</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            26</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            27</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            28</div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                            <span class="ev showCal" keyvalue="29">29</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sun">
+                                                        <div>
+                                                            30</div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <span class="hu showCal" keyvalue="31">31</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="sat">
+                                                        <div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-08">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead><tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                4</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="5">5</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="7">7</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                10</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                11</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="12">12</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                13</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="14">14</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                15</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                16</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                17</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                18</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="19">19</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                20</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="21">21</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                22</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                23</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                24</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                25</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="26">26</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                27</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="28">28</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                29</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                30</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                31</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-09">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                1</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="2">2</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="4">4</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                8</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="9">9</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                10</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="11">11</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                12</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                13</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                14</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                15</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="16">16</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                17</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="18">18</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                19</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                20</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                21</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                22</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="23">23</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                24</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="25">25</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                26</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                27</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                28</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                29</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="30">30</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-10">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="2">2</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                6</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="7">7</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="9">9</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                10</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                11</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                12</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                13</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="14">14</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                15</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="16">16</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                17</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                18</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                19</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                20</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="21">21</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                22</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="23">23</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                24</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                25</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                26</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                27</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="28">28</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                29</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="30">30</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                31</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-11">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                3</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                <span class="ev showCal" keyvalue="4">4</span>
+                                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="6">6</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                8</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                9</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                10</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                11</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                12</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="13">13</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                14</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                15</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                16</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                17</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                18</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                19</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="20">20</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                21</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                22</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                23</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                24</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                25</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                26</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="27">27</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                28</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                29</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                30</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <table class="cal-tbl" keyvalue="2023-12">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sun">일</th>
+                                                    <th>월</th>
+                                                    <th>화</th>
+                                                    <th>수</th>
+                                                    <th>목</th>
+                                                    <th>금</th>
+                                                    <th class="sat">토</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                1</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                2</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                3</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="4">4</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                5</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                6</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                7</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                8</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                9</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                10</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="11">11</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                12</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                13</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                14</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                15</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                16</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                17</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="18">18</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                19</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                20</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                21</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                22</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                23</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                24</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="hu showCal" keyvalue="25">25</span>
+                                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                26</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                27</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                28</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                29</div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                30</div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                        <td class="sun">
+                                                            <div>
+                                                                31</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                        <td class="sat">
+                                                            <div>
+                                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
                                         <div class="planView">
                                             <div class="inbox" id="popup_layer" style="display: none;">
                                                 <div id="3" class="calAll" style="display: none;">
@@ -748,135 +2967,12 @@
         <article class="main_4 section" id="main_4">
             <script>
                 $(function () {
-                    var _width = $(window).width();
-                    var _bookListTop;
+                    var _bookList;
                     var _bookListBottom;
 
                     var Books = function () {
-                        try {
-                            if (_bookListTop) _bookListTop.destroySlider();
-                            if (_bookListBottom) _bookListBottom.destroySlider();
-                        } catch (e) {
-                            // TODO: handle exception
-                        }
-
-                        if (_width <= 380) {
-                            _bookListTop = $('.bookListTop ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 1,
-                                slideWidth: 190,
-                                slideMargin: 0
-                            });
-
-                            _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 1,
-                                slideWidth: 190,
-                                slideMargin: 0
-                            });
-                        }
-                        else if (_width <= 550 && _width > 380) {
-                            _bookListTop = $('.bookListTop ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 2,
-                                slideWidth: 190,
-                                slideMargin: 0
-                            });
-
-                            _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 2,
-                                slideWidth: 190,
-                                slideMargin: 0
-                            });
-                        }
-                        else if (_width <= 768 && _width > 550) {
-                            _bookListTop = $('.bookListTop ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 3,
-                                slideWidth: 190,
-                                slideMargin: 10
-                            });
-
-                            _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 3,
-                                slideWidth: 190,
-                                slideMargin: 10
-                            });
-                        }
-                        else if (_width <= 1024 && _width > 768) {
-                            _bookListTop = $('.bookListTop ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 4,
-                                slideWidth: 190,
-                                slideMargin: 20
-                            });
-
-                            _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 4,
-                                slideWidth: 190,
-                                slideMargin: 20
-                            });
-                        }
-                        else if (_width <= 1600 && _width > 1024) {
-                            _bookListTop = $('.bookListTop ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 4,
-                                slideWidth: 190,
-                                slideMargin: 10
-                            });
-
-                            _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 4,
-                                slideWidth: 190,
-                                slideMargin: 20
-                            });
-                        }
-                        else {
-                            _bookListTop = $('.bookListTop ul').bxSlider({
+                        
+                        _bookListTop = $('.bookListTop ul').bxSlider({
                                 auto: true,
                                 autoHover: true,
                                 speed: 500,
@@ -898,10 +2994,9 @@
                                 slideMargin: 30
                             });
                         }
-                    };
+                    
                     Books();
                     $(window).on('resize', function () {
-                        _width = $(window).width();
                         Books();
                     });
                 });
@@ -1368,7 +3463,7 @@
     <script type="text/javascript">
         function fullPage() {
             var myFullpage = new fullpage('#fullpage', {
-                // anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
                 navigation: true,
                 // showActiveTooltip: true,
                 // menu: '#menu',
