@@ -22,97 +22,183 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
     <style>
-        /* .test1{
-            padding: 20px;
-            border: 3px black solid;
-        } */
+      .bottom-banner-wrap {
+        width: 100%;
+        border-top: 1px solid #e6e6e6;
+        background-color: #f8f8f8;
+        padding: 18px 0;
+      }
+      .sections {
+        position: relative;
+      }
+      .banner-wrap {
+        overflow: hidden;
+      }
+      .banner-wrap > .banner-t6 {
+        float: left;
+        width: 120px;
+        padding-right: 30px;
+        padding-left: 0;
+      }
+      .banner-wrap .banner-t6 .control {
+        padding: 10px 0;
+        float: left;
+      }
+      .banner-wrap .banner-t6 .control a {
+        font-size: 13px;
+        display: inline-block;
+      }
+      /* .control a {
+        position: relative;
+      } */
+
+      .banner-wrap > .banner-box6 {
+        float: left;
+        width: calc(100% - 295px);  /* ?? */
+        padding: 10px 0;
+      }
+
+
+
+
     </style>
-        <!-- main2: 공지사항, 팝업존 -->
-    <script>
-        $(document).ready(function () {
-            // 팝업존
-            if ($('div.popupzonenew ul').length > 0) {
-                $('div.popupzonenew ul').bxSlider({
-                    mode: 'fade',
-                    auto: true,
-                    // autoHover: true,
-                    speed: 500,
-                    pager: false,
-                    // pagerType: 'short',
-                    // auto: true,
-                    autoControls: true,
-                    autoControlsCombine: true
-                });
-            }
-        });
-    </script>
 </head>
 
 <body >
-
-        </article>
-        <article class="main_2 section" id="main_2">
-            <!-- 임지연 -->
-            <div id="main1">
-                <!-- 팝업존에 관한 것 -->
-                <div class="main1-inner-right">
-                    <div class="popupzone-box">
-                        <div class="title">
-                            <h3>팝업존</h3>
-                        </div>
-                        <div class="popupzonenew">
-                            <div class="bx-wrapper">
-                                <div class="bx-viewport">
-                                    <ul>
-                                        <li>
-                                            <a
-                                                href="#">
-                                                <img alt="5월 휴관" src="/data/popupZone/h26/1685665582984.jpg"></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img alt="두배로" src="/data/popupZone/h26/1683605178662.jpg"></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img alt="5,6 추천도서" src="/data/popupZone/h26/1683081896240.jpg"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            
-                            </div>
-                        </div>
+<!--footer_section-->
+<div class="bottom-banner-wrap">
+    <div class="banner-box">
+        <div class="sections">
+            <div class="banner-wrap type6">
+                <div class="control">
+                    <a class="prev" href="#prev">
+                        <img src="/resources/homepage/gbelib/img/section04/banner-prev-btn.png" alt="이전">
+                        <span class="blind">이전</span>
+                    </a>
+                    <a class="next" href="#next">
+                        <img src="/resources/homepage/gbelib/img/section04/banner-next-btn.png" alt="다음">
+                        <span class="blind">다음</span>
+                    </a>
+                </div>
+            </div>
+            <div class="banner-box6">
+                <div class="bx-wrapper">
+                    <div class="bx-viewport">
+                        <ul class="banner-roll">
+                            <li>
+                                <span>
+                                    <a target="_blank" href="#" class="newWin" title="새창으로 열립니다.">
+                                        <img alt="경상북도교육청" src="/data/banner/h26/1673495359451.png">
+                                        <i class="fa fa-external-link"></i>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a target="_blank" href="#" class="newWin" title="새창으로 열립니다.">
+                                        <img alt="경상북도울릉교육지원청" src="/data/banner/h26/1673494940743.png">
+                                        <i class="fa fa-external-link"></i>
+                                     </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a target="_blank" href="#" class="newWin" title="새창으로 열립니다.">
+                                        <img alt="울릉군" src="/data/banner/h26/1673495351104.png">
+                                        <i class="fa fa-external-link"></i>
+                                     </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a target="_blank" href="#" class="newWin" title="새창으로 열립니다.">
+                                        <img alt="국립중앙도서관" src="/data/banner/h26/1673494954429.png">
+                                        <i class="fa fa-external-link"></i>
+                                     </a>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="bnner-t6-after">
+                <div class="contorl">
+                    <a class="stop active" href="#stop">
+                        <img src="/resources/homepage/gbelib/img/section04/banner-stop-btn.png" alt="정지">
+                        <span class="blind">정지</span>
+                    </a>
+                    <a class="plat" href="#play">
+                        <img src="/resources/homepage/gbelib/img/section04/banner-start-btn.png" alt="시작">
+                        <span class="blind">시작</span>
+                    </a>
+                    <a class="more" href="#">
+                        <img src="/resources/homepage/gbelib/img/section04/banner-more-btn.png" alt="더보기">
+                        <span class="blind">더보기</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer2-->
+<div class="section fp-auto-heght footer_area fp-section fp-table active fp-completely" id="footer_section" data-fp-styles="null">
+    <div class="fp-tableCell">
+        <div id="footer">
+            <div class="top-box">
+                <div class="section">
+                    <div class="info">
+                        <h3>경상북도교육청 울릉도서관</h3>
+                        <address>
+                            <p>
+                                <em>(우 40218) 경북 울릉군 울릉읍 봉래길 128-10 (저동리)</em>
+                                <br>
+                                <em>전화 (사무실)054-791-2204, (자료실)054-791-9043, (섬초롱도서관)054-791-3064</em>
+                                <br class="mobile-view">
+                                <em>팩스 054-791-5211</em> 
+                            </p>
+                            <span>COPYRIGHT © BY ULLEUNG PUBLIC LIBRARY PUBLIC LIBRARY, ALL RIGHTS RESERVED.</span>
+                        </address>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-box">
+                <div class="section">
+                    <div class>
+                        <div class="overflow-x">
+                            <div class="info">
+                                <a href="#">도서관이용규정</a>
+                                <span class="txt-menu-bar"></span>
+                                <a href="#">개인정보처리방침</a>
+                                <span class="txt-menu-bar"></span>
+                                <a href="#">영상정보처리기기운영관리방침</a>
+                                <span class="txt-menu-bar"></span>
+                                <a href="#">도서관서비스헌장</a>
+                                <span class="txt-menu-bar"></span>
+                                <a href="#">찾아오시는길</a>
+                                <span class="txt-menu-bar"></span>
+                            </div>
+                        </div>
+                        <div class="info-right">
+                            <div class="site_link">
+                                <select name="select" title="새창열림">
+                                    <option value="#">경상북도교육청 공공도서관</option>
+                                    <option value="#">경상북도교육청정보센터</option>
+                                    <option value="#">경상북도교육청 구미도서관</option>
+                                    <option value="#">경상북도교육청 안동도서관</option>
+                                </select>
+                                <a href="#move" class="sel-btn recommendSitell" title="새창열림">이동</a>
+                            </div>
 
-        </article>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </div>
 
-    </section>
+</div>
 
-<script type="text/javascript">
-    function fullPage() {
-        var myFullpage = new fullpage('#fullpage', {
-            // menu: '#menu',
-            // autoSrolling:true,
-            // scrollHorizontally: true  ,
-            // lockAnchors:false,
-            // anchors:['section1', 'section2','section3', 'section4'],
-            navigation: true,
-            // navigationPosition: 'right',
-            // navigationTooltips:['firstSlide','secondSlide'],
-            // showActiveTooltips:false,
-            // slidesNavigation:false,
-            
-            // slidesNavPosition:'bottom',
-            // slidesNavigation: true,
-            // showActiveTooltip: true,
-
-        });
-    };
-    fullPage();
-</script>
 
 </body>
 </html>
