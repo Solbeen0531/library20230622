@@ -56,9 +56,10 @@
             background: url('/resources/common/img/book_type01/book01-bg.jpg');
             background-size: cover;
 
-            width: 326px;
+            width: 22%;
             height: 403.5px;
             position: relative;
+            float: left;
         }
 
         #main_4 .title {
@@ -88,23 +89,23 @@
 
         /* 오른쪽 위 신간도서 슬라이드 */
         #main_4 .main4-top-right {
-            width: 978px;
+            width: 75%;
             height: 403.5px;
             float: right;
             margin-top: 0px;
         }
 
-        #main_4 .main4-top-right>.bx-wrapper {
+        /* #main_4 .main4-top-right>.bx-wrapper {
             max-width: 590px;
             margin: 0px auto;
-        }
+        } */
 
-        #main_4 .bx-viewport {
+        /* #main_4 .bx-viewport {
             width: 100%;
             overflow: hidden;
             position: relative;
             height: 328px;
-        }
+        } */
 
         #main_4 .main4-top-right>ul {
             width: 1215%;
@@ -124,6 +125,20 @@
             clear: both;
         }
 
+
+        #main_4 .main4-bottom-left {
+            width: 75%;
+            float: left;
+        }
+
+        #main_4 .main4-bottom-right {
+            background: url('/resources/common/img/book_type01/book01-bg.jpg');
+            color: white;
+            margin-top: 403.5;
+            width: 22%;
+            height: 403.5px;
+            float: right;
+        }
 
         #main_4 .main4-bottom-left>.bx-wrapper {
             float: left;
@@ -145,19 +160,11 @@
             margin-right: 20px;
         }
 
-        #main_4 .main4-bottom-right {
-            background: url('/resources/common/img/book_type01/book01-bg.jpg');
-            color: white;
-            margin-top: 403.5;
-            width: 326px;
-            height: 403.5px;
-            float: right;
-        }
 
-        /* #main_4 .bookListTop {overflow:hidden;} */
-        /* #main_4 .bookListTop .item {position:relative;padding:0;} */
-        /* #main_4 .bookListTop .item a {width:195px;height:285px;font-size:16px;color:#333;font-weight:500;} */
-        /* #main_4 .bookListTop .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;} */
+        #main_4 .bookListTop {overflow:hidden;}
+        #main_4 .bookListTop .item {position:relative;padding:0;}
+        #main_4 .bookListTop .item a {width:195px;height:285px;font-size:16px;color:#333;font-weight:500;}
+        #main_4 .bookListTop .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;}
 
         #main_4 .bookListTop .bx-controls {
             position: absolute;
@@ -192,10 +199,10 @@
             right: 0;
         }
 
-        /* #main_4 .bookListBottom {overflow:hidden;} */
-        /* #main_4 .bookListBottom .item {position:relative;padding:0;} */
-        /* #main_4 .bookListBottom .item a {width:195px;height:285px;} */
-        /* #main_4 .bookListBottom .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;} */
+        #main_4 .bookListBottom {overflow:hidden;}
+        #main_4 .bookListBottom .item {position:relative;padding:0;}
+        #main_4 .bookListBottom .item a {width:195px;height:285px;}
+        #main_4 .bookListBottom .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;}
 
         #main_4 .bookListBottom .bx-controls {
             position: absolute;
@@ -229,6 +236,12 @@
             background-size: initial;
             right: 0;
         }
+
+        #main_4 .mid-sections {
+            position: relative;
+            overflow: hidden;
+        }
+
     </style>
 
 </head>
@@ -2967,10 +2980,10 @@
         <article class="main_4 section" id="main_4">
             <script>
                 $(function () {
-                    var _bookList;
+                    var _bookListTop;
                     var _bookListBottom;
 
-                    var Books = function () {
+                    // var Books = function () {
                         
                         _bookListTop = $('.bookListTop ul').bxSlider({
                                 auto: true,
@@ -2993,12 +3006,12 @@
                                 slideWidth: 190,
                                 slideMargin: 30
                             });
-                        }
+                    // }
                     
-                    Books();
-                    $(window).on('resize', function () {
-                        Books();
-                    });
+                    // Books();
+                    // $(window).on('resize', function () {
+                    //     Books();
+                    // });
                 });
             </script>
             <div>
@@ -3020,8 +3033,8 @@
                                 <div class="outer">
                                     <div class="inner">
                                         <div class="bookListTop">
-                                            <div class="bx-wrapper">
-                                                <div class="bx-viewport">
+                                            <!-- <div class="bx-wrapper"> -->
+                                                <!-- <div class="bx-viewport"> -->
                                                     <ul>
                                                         <li class="item bx-clone">
                                                             <a
@@ -3226,14 +3239,14 @@
                                                         </li>
                                                     </ul>
                                                     <!-- controller 부분 자동 생성 -->
-                                                </div>
-                                                <div class="bx-controls bx-has-controls-direction">
+                                                <!-- </div> -->
+                                                <!-- <div class="bx-controls bx-has-controls-direction">
                                                     <div class="bx-controls-direction">
                                                         <a class="bx-prev" href="">Prev</a>
                                                         <a class="bx-next" href="">Next</a>
                                                     </div>
-                                                </div>
-                                            </div>
+                                                </div> -->
+                                            <!-- </div> -->
 
                                         </div>
                                     </div>
@@ -3261,8 +3274,8 @@
                                 <div class="outer">
                                     <div class="inner">
                                         <div class="bookListBottom">
-                                            <div class="bx-wrapper">
-                                                <div class="bx-viewport">
+                                            <!-- <div class="bx-wrapper"> -->
+                                                <!-- <div class="bx-viewport"> -->
                                                     <ul>
                                                         <li class="item bx-clone">
                                                             <a
@@ -3435,13 +3448,13 @@
                                                             </a>
                                                         </li>
                                                     </ul>
-                                                </div>
-                                                <div class="bx-controls bx-has-controls-direction">
+                                                <!-- </div> -->
+                                                <!-- <div class="bx-controls bx-has-controls-direction">
                                                     <div class="bx-controls-direction"><a class="bx-prev"
                                                             href="">Prev</a><a class="bx-next" href="">Next</a>
                                                     </div>
-                                                </div>
-                                            </div>
+                                                </div> -->
+                                            <!-- </div> -->
                                         </div>
                                     </div>
                                 </div>
