@@ -17,12 +17,14 @@
     <link rel="stylesheet" href="/resources/common/css/main_1.css">
     <link rel="stylesheet" href="/resources/common/css/main2.css">
     <link rel="stylesheet" href="/resources/common/css/main3.css">
+    <link rel="stylesheet" href="/resources/common/css/main4.css">
     <link rel="stylesheet" href="/resources/common/css/culture_type02.css">
     <link rel="stylesheet" href="/resources/common/css/header.css">
 
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" rel="stylesheet"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
     <link rel="stylesheet" href="/resources/common/css/jquery.fullpage.css">
+    
     <!-- main2: 공지사항, 팝업존 -->
     <script>
         //jQuery를 사용하여 페이지 로딩이 완료된 후 실행되는 함수를 정의(팝업존에 대한 설정을 처리)
@@ -43,216 +45,6 @@
             }
         });
     </script>
-
-    <!-- main3: 달력, 이벤트 -->
-    <style>
-
-    </style>
-
-    <!-- main4: 책 소개 -->
-    <style>
-
-        /* 왼쪽 위 신간도서 */
-        #main_4 .main4-top-left {
-            background: url('/resources/common/img/book_type01/book01-bg.jpg');
-            background-size: cover;
-
-            width: 22%;
-            height: 403.5px;
-            position: relative;
-            float: left;
-        }
-
-        #main_4 .title {
-            margin-top: 80px;
-            position: relative;
-            box-sizing: border-box;
-        }
-
-        #main_4 .title .stxt {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
-
-            padding-left: 5px;
-            letter-spacing: 3px;
-        }
-
-        #main_4 .title .ltxt {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: bold;
-            font-size: 36px;
-            color: #fff;
-        }
-
-        /* 오른쪽 위 신간도서 슬라이드 */
-        #main_4 .main4-top-right {
-            width: 75%;
-            height: 403.5px;
-            float: right;
-            margin-top: 0px;
-        }
-
-        /* #main_4 .main4-top-right>.bx-wrapper {
-            max-width: 590px;
-            margin: 0px auto;
-        } */
-
-        /* #main_4 .bx-viewport {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            height: 328px;
-        } */
-
-        #main_4 .main4-top-right>ul {
-            width: 1215%;
-            position: relative;
-            transition-duration: 0.5s;
-            transform: translate3d(-1000px, 0px, 0px);
-        }
-
-        #main_4>.main4-top-right>.item bx-clone {
-            list-style: none;
-            position: relative;
-            width: 190px;
-            margin-right: 10px;
-        }
-
-        #main_4 {
-            clear: both;
-        }
-
-
-        #main_4 .main4-bottom-left {
-            width: 75%;
-            float: left;
-        }
-
-        #main_4 .main4-bottom-right {
-            background: url('/resources/common/img/book_type01/book01-bg.jpg');
-            color: white;
-            margin-top: 403.5;
-            width: 22%;
-            height: 403.5px;
-            float: right;
-        }
-
-        #main_4 .main4-bottom-left>.bx-wrapper {
-            float: left;
-            max-width: 820px;
-            margin: 0px auto;
-        }
-
-        #main_4 .main4-bottom-left>ul {
-            width: 815%;
-            position: relative;
-            transition-duration: 0.5s;
-            transform: translate3d(-1260px, 0px, 0px);
-        }
-
-        #main_4 .main4-bottom-left>.item bx-clone {
-            list-style: none;
-            position: relative;
-            width: 190px;
-            margin-right: 20px;
-        }
-
-
-
-        #main_4 .bookListTop {overflow:hidden;}
-        #main_4 .bookListTop .item {position:relative;padding:0;}
-        #main_4 .bookListTop .item a {width:195px;height:285px;font-size:16px;color:#333;font-weight:500;}
-        #main_4 .bookListTop .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;}
-
-
-        #main_4 .bookListTop .bx-controls {
-            position: absolute;
-            width: 380px;
-            height: 50px;
-            bottom: 75px;
-            left: 0;
-            z-index: 150000000;
-        }
-
-        /* 신간도서 화살표 왼쪽 */
-        #main_4 .bookListTop .bx-prev {
-            position: absolute;
-            width: 110px;
-            height: 29px;
-            font-size: 0;
-            background-image: url("/resources/common/img/book_type01/book-prev-btn.png");
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            background-size: initial;
-            left: 0;
-        }
-
-        /* 신간도서 화살표 오른쪽 */
-        #main_4 .bookListTop .bx-next {
-            position: absolute;
-            width: 110px;
-            height: 29px;
-            font-size: 0;
-            background-image: url("/resources/common/img/book_type01/book-next-btn.png");
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            background-size: initial;
-            right: 0;
-        }
-
-
-        #main_4 .bookListBottom {overflow:hidden;}
-        #main_4 .bookListBottom .item {position:relative;padding:0;}
-        #main_4 .bookListBottom .item a {width:195px;height:285px;}
-        #main_4 .bookListBottom .item a img {width:195px;height:285px;border:1px solid #e9e9e9;border-radius:5px;box-sizing:border-box;}
-
-        /* #main_4 .bookListBottom {overflow:hidden;} */
-        /* #main_4 .bookListBottom .item {position:relative;padding:0;} */
-        /* #main_4 .bookListBottom .item a {width:195px;height:285px;} */
-        
-
-
-        #main_4 .bookListBottom .bx-controls {
-            position: absolute;
-            width: 380px;
-            height: 50px;
-            bottom: 75px;
-            right: 0;
-            z-index: 150000000;
-        }
-
-        #main_4 .bookListBottom .bx-prev {
-            position: absolute;
-            width: 110px;
-            height: 29px;
-            font-size: 0;
-            background-image: url("/resources/common/img/book_type01/book-prev-btn.png");
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            background-size: initial;
-            left: 0;
-        }
-
-        #main_4 .bookListBottom .bx-next {
-            position: absolute;
-            width: 110px;
-            height: 29px;
-            font-size: 0;
-            background-image: url("/resources/common/img/book_type01/book-next-btn.png");
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            background-size: initial;
-            right: 0;
-        }
-
-
-        #main_4 .mid-sections {
-            position: relative;
-            overflow: hidden;
-        }
-
-    </style>
 
 </head>
 
@@ -2997,30 +2789,30 @@
 
 
                     // var Books = function () {
-                        
-                        _bookListTop = $('.bookListTop ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 5,
-                                slideWidth: 190,
-                                slideMargin: 30
-                            });
 
-                            _bookListBottom = $('.bookListBottom ul').bxSlider({
-                                auto: true,
-                                autoHover: true,
-                                speed: 500,
-                                pager: false,
-                                moveSlides: 1,
-                                maxSlides: 5,
-                                slideWidth: 190,
-                                slideMargin: 30
-                            });
+                    _bookListTop = $('.bookListTop ul').bxSlider({
+                        auto: true,
+                        autoHover: true,
+                        speed: 500,
+                        pager: false,
+                        moveSlides: 1,
+                        maxSlides: 5,
+                        slideWidth: 190,
+                        slideMargin: 30
+                    });
+
+                    _bookListBottom = $('.bookListBottom ul').bxSlider({
+                        auto: true,
+                        autoHover: true,
+                        speed: 500,
+                        pager: false,
+                        moveSlides: 1,
+                        maxSlides: 5,
+                        slideWidth: 190,
+                        slideMargin: 30
+                    });
                     // }
-                    
+
                     // Books();
                     // $(window).on('resize', function () {
                     //     Books();
@@ -3048,213 +2840,210 @@
                                     <div class="inner">
                                         <div class="bookListTop">
                                             <!-- <div class="bx-wrapper"> -->
-                                                <!-- <div class="bx-viewport"> -->
-                                                    <ul>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320345&amp;vImg=https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg"
-                                                                        alt="하버드 교수의 생각 정리 수업" title="하버드 교수의 생각 정리 수업">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    하버드 교수의 생각 정리 수업</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320344&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg"
-                                                                        alt="리더의 질문법" title="리더의 질문법">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    리더의 질문법</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320343&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg"
-                                                                        alt="실리콘밸리의 팀장들" title="실리콘밸리의 팀장들">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    실리콘밸리의 팀장들</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320342&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg"
-                                                                        alt="책으로 치유하는 시간" title="책으로 치유하는 시간">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    책으로 치유하는 시간</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320356&amp;vImg=https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg"
-                                                                        alt="랩 스타일의 핸드메이드 레시피" title="랩 스타일의 핸드메이드 레시피">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    랩 스타일의 핸드메이드 레시피</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320358&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg"
-                                                                        alt="세상에 하나뿐인 앞치마" title="세상에 하나뿐인 앞치마">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    세상에 하나뿐인 앞치마</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320357&amp;vImg=https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg"
-                                                                        alt="오버록으로 간단하게 만드는 예쁜 옷"
-                                                                        title="오버록으로 간단하게 만드는 예쁜 옷">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    오버록으로 간단하게 만드는 예쁜 옷</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320341&amp;vImg=https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg"
-                                                                        alt="슬기로운 엄마표 영어 지침서" title="슬기로운 엄마표 영어 지침서">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    슬기로운 엄마표 영어 지침서</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320347&amp;vImg=https://shopping-phinf.pstatic.net/main_3936460/39364600632.20230425162255.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3936460/39364600632.20230425162255.jpg"
-                                                                        alt="내가 가진 것을 세상이 원하게 하라"
-                                                                        title="내가 가진 것을 세상이 원하게 하라">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    내가 가진 것을 세상이 원하게 하라</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320346&amp;vImg=https://shopping-phinf.pstatic.net/main_3249133/32491338036.20221019104554.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3249133/32491338036.20221019104554.jpg"
-                                                                        alt="오두막" title="오두막">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    오두막</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320345&amp;vImg=https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg"
-                                                                        alt="하버드 교수의 생각 정리 수업" title="하버드 교수의 생각 정리 수업">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    하버드 교수의 생각 정리 수업</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320344&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg"
-                                                                        alt="리더의 질문법" title="리더의 질문법">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    리더의 질문법</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320343&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg"
-                                                                        alt="실리콘밸리의 팀장들" title="실리콘밸리의 팀장들">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    실리콘밸리의 팀장들</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320342&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg"
-                                                                        alt="책으로 치유하는 시간" title="책으로 치유하는 시간">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    책으로 치유하는 시간</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320356&amp;vImg=https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg"
-                                                                        alt="랩 스타일의 핸드메이드 레시피" title="랩 스타일의 핸드메이드 레시피">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    랩 스타일의 핸드메이드 레시피</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320358&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg"
-                                                                        alt="세상에 하나뿐인 앞치마" title="세상에 하나뿐인 앞치마">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    세상에 하나뿐인 앞치마</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320357&amp;vImg=https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg"
-                                                                        alt="오버록으로 간단하게 만드는 예쁜 옷"
-                                                                        title="오버록으로 간단하게 만드는 예쁜 옷">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    오버록으로 간단하게 만드는 예쁜 옷</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320341&amp;vImg=https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg&amp;menu_idx=12">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg"
-                                                                        alt="슬기로운 엄마표 영어 지침서" title="슬기로운 엄마표 영어 지침서">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    슬기로운 엄마표 영어 지침서</div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                    <!-- controller 부분 자동 생성 -->
-                                                <!-- </div> -->
-                                                <!-- <div class="bx-controls bx-has-controls-direction">
+                                            <!-- <div class="bx-viewport"> -->
+                                            <ul>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320345&amp;vImg=https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg"
+                                                                alt="하버드 교수의 생각 정리 수업" title="하버드 교수의 생각 정리 수업">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            하버드 교수의 생각 정리 수업</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320344&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg"
+                                                                alt="리더의 질문법" title="리더의 질문법">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            리더의 질문법</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320343&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg"
+                                                                alt="실리콘밸리의 팀장들" title="실리콘밸리의 팀장들">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            실리콘밸리의 팀장들</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320342&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg"
+                                                                alt="책으로 치유하는 시간" title="책으로 치유하는 시간">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            책으로 치유하는 시간</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320356&amp;vImg=https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg"
+                                                                alt="랩 스타일의 핸드메이드 레시피" title="랩 스타일의 핸드메이드 레시피">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            랩 스타일의 핸드메이드 레시피</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320358&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg"
+                                                                alt="세상에 하나뿐인 앞치마" title="세상에 하나뿐인 앞치마">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            세상에 하나뿐인 앞치마</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320357&amp;vImg=https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg"
+                                                                alt="오버록으로 간단하게 만드는 예쁜 옷" title="오버록으로 간단하게 만드는 예쁜 옷">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            오버록으로 간단하게 만드는 예쁜 옷</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320341&amp;vImg=https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg"
+                                                                alt="슬기로운 엄마표 영어 지침서" title="슬기로운 엄마표 영어 지침서">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            슬기로운 엄마표 영어 지침서</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320347&amp;vImg=https://shopping-phinf.pstatic.net/main_3936460/39364600632.20230425162255.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3936460/39364600632.20230425162255.jpg"
+                                                                alt="내가 가진 것을 세상이 원하게 하라" title="내가 가진 것을 세상이 원하게 하라">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            내가 가진 것을 세상이 원하게 하라</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320346&amp;vImg=https://shopping-phinf.pstatic.net/main_3249133/32491338036.20221019104554.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3249133/32491338036.20221019104554.jpg"
+                                                                alt="오두막" title="오두막">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            오두막</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320345&amp;vImg=https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3873503/38735030622.20230328162052.jpg"
+                                                                alt="하버드 교수의 생각 정리 수업" title="하버드 교수의 생각 정리 수업">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            하버드 교수의 생각 정리 수업</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320344&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/221/365/22136531.jpg"
+                                                                alt="리더의 질문법" title="리더의 질문법">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            리더의 질문법</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320343&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/150/289/15028963.jpg"
+                                                                alt="실리콘밸리의 팀장들" title="실리콘밸리의 팀장들">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            실리콘밸리의 팀장들</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320342&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/147/902/14790202.jpg"
+                                                                alt="책으로 치유하는 시간" title="책으로 치유하는 시간">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            책으로 치유하는 시간</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320356&amp;vImg=https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3951125/39511250623.20230509163900.jpg"
+                                                                alt="랩 스타일의 핸드메이드 레시피" title="랩 스타일의 핸드메이드 레시피">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            랩 스타일의 핸드메이드 레시피</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320358&amp;vImg=https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/207/318/20731859.jpg"
+                                                                alt="세상에 하나뿐인 앞치마" title="세상에 하나뿐인 앞치마">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            세상에 하나뿐인 앞치마</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320357&amp;vImg=https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3889468/38894684618.20230425161852.jpg"
+                                                                alt="오버록으로 간단하게 만드는 예쁜 옷" title="오버록으로 간단하게 만드는 예쁜 옷">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            오버록으로 간단하게 만드는 예쁜 옷</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/intro/search/detail.do?vLoca=00147017&amp;vCtrl=000004320341&amp;vImg=https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg&amp;menu_idx=12">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3947698/39476988620.20230509165943.jpg"
+                                                                alt="슬기로운 엄마표 영어 지침서" title="슬기로운 엄마표 영어 지침서">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            슬기로운 엄마표 영어 지침서</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- controller 부분 자동 생성 -->
+                                            <!-- </div> -->
+                                            <!-- <div class="bx-controls bx-has-controls-direction">
                                                     <div class="bx-controls-direction">
                                                         <a class="bx-prev" href="">Prev</a>
                                                         <a class="bx-next" href="">Next</a>
@@ -3289,181 +3078,181 @@
                                     <div class="inner">
                                         <div class="bookListBottom">
                                             <!-- <div class="bx-wrapper"> -->
-                                                <!-- <div class="bx-viewport"> -->
-                                                    <ul>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243226">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3801892/38018924625.20230313185352.jpg"
-                                                                        alt="손톱달의 비밀" title="손톱달의 비밀"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    손톱달의 비밀</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
-                                                                        alt="네가 사라진 날" title="네가 사라진 날"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    네가 사라진 날</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243223">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3764956/37649562618.20230214162318.jpg"
-                                                                        alt="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
-                                                                        title="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243222">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3804081/38040810631.20230313183950.jpg"
-                                                                        alt="어른의 말센스" title="어른의 말센스"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    어른의 말센스</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243228">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/214/806/21480609.jpg"
-                                                                        alt="악당이 된 녀석들" title="악당이 된 녀석들"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    악당이 된 녀석들</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243227">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3548319/35483195620.20221027181455.jpg"
-                                                                        alt="안녕 본본" title="안녕 본본"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    안녕 본본</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243226">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3801892/38018924625.20230313185352.jpg"
-                                                                        alt="손톱달의 비밀" title="손톱달의 비밀"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    손톱달의 비밀</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
-                                                                        alt="네가 사라진 날" title="네가 사라진 날"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    네가 사라진 날</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243223">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3764956/37649562618.20230214162318.jpg"
-                                                                        alt="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
-                                                                        title="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243222">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3804081/38040810631.20230313183950.jpg"
-                                                                        alt="어른의 말센스" title="어른의 말센스"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    어른의 말센스</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243228">
-                                                                <div class="">
-                                                                    <img src="https://bookthumb-phinf.pstatic.net/cover/214/806/21480609.jpg"
-                                                                        alt="악당이 된 녀석들" title="악당이 된 녀석들"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    악당이 된 녀석들</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243227">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3548319/35483195620.20221027181455.jpg"
-                                                                        alt="안녕 본본" title="안녕 본본"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    안녕 본본</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243226">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3801892/38018924625.20230313185352.jpg"
-                                                                        alt="손톱달의 비밀" title="손톱달의 비밀"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    손톱달의 비밀</div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item bx-clone">
-                                                            <a
-                                                                href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
-                                                                <div class="">
-                                                                    <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
-                                                                        alt="네가 사라진 날" title="네가 사라진 날"
-                                                                        onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
-                                                                </div>
-                                                                <div class="btxt">
-                                                                    네가 사라진 날</div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                <!-- </div> -->
-                                                <!-- <div class="bx-controls bx-has-controls-direction">
+                                            <!-- <div class="bx-viewport"> -->
+                                            <ul>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243226">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3801892/38018924625.20230313185352.jpg"
+                                                                alt="손톱달의 비밀" title="손톱달의 비밀"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            손톱달의 비밀</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
+                                                                alt="네가 사라진 날" title="네가 사라진 날"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            네가 사라진 날</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243223">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3764956/37649562618.20230214162318.jpg"
+                                                                alt="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
+                                                                title="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243222">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3804081/38040810631.20230313183950.jpg"
+                                                                alt="어른의 말센스" title="어른의 말센스"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            어른의 말센스</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243228">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/214/806/21480609.jpg"
+                                                                alt="악당이 된 녀석들" title="악당이 된 녀석들"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            악당이 된 녀석들</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243227">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3548319/35483195620.20221027181455.jpg"
+                                                                alt="안녕 본본" title="안녕 본본"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            안녕 본본</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243226">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3801892/38018924625.20230313185352.jpg"
+                                                                alt="손톱달의 비밀" title="손톱달의 비밀"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            손톱달의 비밀</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
+                                                                alt="네가 사라진 날" title="네가 사라진 날"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            네가 사라진 날</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243223">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3764956/37649562618.20230214162318.jpg"
+                                                                alt="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
+                                                                title="당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            당신의 세계는 아직도 바다와 빗소리와 작약을 취급하는지</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243222">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3804081/38040810631.20230313183950.jpg"
+                                                                alt="어른의 말센스" title="어른의 말센스"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            어른의 말센스</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243228">
+                                                        <div class="">
+                                                            <img src="https://bookthumb-phinf.pstatic.net/cover/214/806/21480609.jpg"
+                                                                alt="악당이 된 녀석들" title="악당이 된 녀석들"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            악당이 된 녀석들</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243227">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3548319/35483195620.20221027181455.jpg"
+                                                                alt="안녕 본본" title="안녕 본본"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            안녕 본본</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243226">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3801892/38018924625.20230313185352.jpg"
+                                                                alt="손톱달의 비밀" title="손톱달의 비밀"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            손톱달의 비밀</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item bx-clone">
+                                                    <a
+                                                        href="/ul/board/view.do?menu_idx=21&amp;manage_idx=529&amp;board_idx=243224">
+                                                        <div class="">
+                                                            <img src="https://shopping-phinf.pstatic.net/main_3755365/37553652619.20230201070943.jpg"
+                                                                alt="네가 사라진 날" title="네가 사라진 날"
+                                                                onerror="this.src='/resources/homepage/gm/img/noimg1.png'">
+                                                        </div>
+                                                        <div class="btxt">
+                                                            네가 사라진 날</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- </div> -->
+                                            <!-- <div class="bx-controls bx-has-controls-direction">
                                                     <div class="bx-controls-direction"><a class="bx-prev"
                                                             href="">Prev</a><a class="bx-next" href="">Next</a>
                                                     </div>
