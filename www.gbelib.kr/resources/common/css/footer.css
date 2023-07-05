@@ -41,7 +41,7 @@
             float: left;
             /* width: calc(100% - 295px); */
             /* ?? */
-            padding: 10px 100px;
+            padding: 10px 50px;
         }
 
         footer .banner-wrap .banner-t6-after {
@@ -80,62 +80,75 @@
             padding-bottom: 25px;
         }
 
-        #footer h3 {
+        #footer_2 h3 {
             color: #c29f7b;
             font-size: 15px;
         }
 
-        #footer .top-box .info {
+        
+        #footer_2 address {
             text-align: left;
         }
-
-        #footer address {
-            text-align: left;
-        }
-
+        
         footer address {
             font-weight: 600;
         }
-
-        #footer address p {
+        
+        #footer_2 address p {
             padding: 15px 0;
             display: block;
         }
-
-        #footer address em {
+        
+        #footer_2 address em {
             color: #b1b1b1;
             font-size: 14px;
             font-size: normal;
+            
         }
 
-        footer .mobile-view {
-            display: none;
-        }
-
-        #footer address span {
+        #footer_2 address span {
             color: #8a8a8a;
             font-size: 13px;
             text-transform: uppercase;
             display: block;
         }
-
-        #footer address span {
+        #footer_2 address span {
             text-align: left;
         }
 
+        footer .mobile-view {
+            display: none;
+        }
+        
         footer .bottom-box {
             position: relative;
             border-top: 1px solid #4c4c4c;
             box-sizing: border-box;
             padding: 35px 0;
         }
-
-        #footer .bottom-box .info {
-            padding: 12px 0;
-            box-sizing: border-box;
+        #footer_2 .info a {
+            color: #b1b1b1;
+            font-size:  15px;
+            text-decoration: none;
         }
 
-        #footer select {
+        #footer_2 .top-box .info {
+            text-align: left;
+        }
+
+        #footer_2 .bottom-box .info {
+            padding: 12px 0;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        .txt-menu-bar {
+            width: 1px;
+            height: 11px;
+            margin: 0 18px;
+            background: #b1b1b1;
+        }
+
+        #footer_2 select {
             font-size: 14px;
             height: 45px;
             padding: 0 30px 0 20px;
@@ -145,23 +158,6 @@
             background: #2C2C2C
         }
 
-        #footer .info a {
-            color: #b1b1b1;
-            font-size: 15px;
-            text-decoration-line: none;
-
-        }
-
-        footer .txt-menu-bar {
-            width: 1px;
-            height: 11px;
-            margin: 0 18px;
-            background: #b1b1b1;
-        }
-        footer .banner-wrap .banner-box6 > div{
-            margin:0!important;
-        }
-
 
         footer .banner-wrap .banner-box6 img {
             max-width: 100%;
@@ -169,29 +165,4 @@
         }
        
 
-        footer .banner-wrap .banner-box6 .bx-wrapper {
-            flex: 1 0 auto;
-        }
-        footer  div.bx-wrapper {
-            max-width: 100%;
-            margin: 0px auto;
-        }
-        footer div.bx-viewport {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            height: 50px;
-        }
-        footer ul.banner-roll {
-            width: 615%;
-            position: relative;
-            transition-duration: 0s;
-            transform: translate3d(-985px, 0px, 0px);
-        }
-        footer li.bx-clone {
-            float: left;
-            list-style: none;
-            position: relative;
-            width: 187px;
-            margin-right: 10px;
-        }
+      

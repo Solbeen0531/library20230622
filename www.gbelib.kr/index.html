@@ -33,7 +33,7 @@
             // 팝업존
             if ($('div.popupzonenew ul').length > 0) {
                 $('div.popupzonenew ul').bxSlider({
-                    mode: 'fade',                   //이미지들이 서서히 사라지고 나타나는 효과를 사용함
+                    mode: 'fade',                   //mode: fade = 슬라이드 이동방향 설정
                     auto: true,                     //슬라이더가 자동으로 이미지를 전환함
                     speed: 500,                     //자동 전환 기능을 제어하는 컨트롤러 표시함
                     pager: false,                   //슬라이더에 페이저(페이지 선택 기능)를 표시하지 않도록 설정함
@@ -45,6 +45,7 @@
                 });
             }
         });
+        //$('.bxslider').bxSlider();의 형태를 보면 jQuery 플러그인으로 만들어 졌다
     </script>
 
     <!-- main3: 달력, 이벤트 -->
@@ -3485,8 +3486,8 @@
 					<div class="banner-wrap type6">
                         <div class="banner-t6">
                             <div class="control">
-                                <a class="prev" href="#prev"><img src="/resources/homepage/gbelib/img/section04/banner-prev-btn.png" alt="이전" /><span class="blind">이전</span></a>
-                                <a class="next" href="#next"><img src="/resources/homepage/gbelib/img/section04/banner-next-btn.png" alt="다음" /><span class="blind">다음</span></a>
+                                <a class="prev" href="#prev"><img src="/resources/homepage/gbelib/img/section04/banner-prev-btn.png" alt="이전" /><span class="blind"></span></a>
+                                <a class="next" href="#next"><img src="/resources/homepage/gbelib/img/section04/banner-next-btn.png" alt="다음" /><span class="blind"></span></a>
                             </div>
                         </div>
                         <div class="banner-box6">
@@ -3590,22 +3591,23 @@
         </footer>
         </section>
 <script>
+    
     // 배너
     var bannerSlider6;
-
-    // if (bannerLength6 > 0) {
-        bannerSlider6 = $('div.banner-wrap.type6 ul.banner-roll').bxSlider({
-            slideWidth: 187,
-            speed: 500,
-            moveSlides: 1,
-            maxSlides: 4,
-            slideMargin: 10,
+    bannerSlider6 = 
+            $('div.banner-wrap.type6 ul.banner-roll').bxSlider({
+        slideWidth: 187,
+        speed: 500,
+        moveSlides: 1,
+        maxSlides: 4,
+        slideMargin: 10,
+        auto: true,
+        autoHover: true,
+        pager: false,
+        controls: false
+    });
+        // if (bannerLength6 > 0) {
             // auto: autoType,
-            auto: true,
-            autoHover: true,
-            pager: false,
-            controls: false
-        });
     // }
 
     // $('div.banner-wrap a.prev').on('click', function() {
